@@ -5,11 +5,56 @@
 //+------------------------------------------------------------------+
 #property copyright "AMIS Strategy"
 #property version   "1.00"
-#property strict
 
 #include <Trade\Trade.mqh>
 #include <Trade\SymbolInfo.mqh>
 #include <Trade\PositionInfo.mqh>
+
+//+------------------------------------------------------------------+
+//| MQL5 series access (no iClose/iOpen in MQL5 - use Copy* )        |
+//+------------------------------------------------------------------+
+double GetPriceClose(const string sym, ENUM_TIMEFRAMES tf, int shift)
+{
+   double arr[];
+   ArraySetAsSeries(arr, true);
+   if (CopyClose(sym, tf, shift, 1, arr) < 1) return 0;
+   return arr[0];
+}
+double GetPriceOpen(const string sym, ENUM_TIMEFRAMES tf, int shift)
+{
+   double arr[];
+   ArraySetAsSeries(arr, true);
+   if (CopyOpen(sym, tf, shift, 1, arr) < 1) return 0;
+   return arr[0];
+}
+double GetPriceHigh(const string sym, ENUM_TIMEFRAMES tf, int shift)
+{
+   double arr[];
+   ArraySetAsSeries(arr, true);
+   if (CopyHigh(sym, tf, shift, 1, arr) < 1) return 0;
+   return arr[0];
+}
+double GetPriceLow(const string sym, ENUM_TIMEFRAMES tf, int shift)
+{
+   double arr[];
+   ArraySetAsSeries(arr, true);
+   if (CopyLow(sym, tf, shift, 1, arr) < 1) return 0;
+   return arr[0];
+}
+long GetVolumeReal(const string sym, ENUM_TIMEFRAMES tf, int shift)
+{
+   long arr[];
+   ArraySetAsSeries(arr, true);
+   if (CopyRealVolume(sym, tf, shift, 1, arr) < 1) return 0;
+   return arr[0];
+}
+datetime GetBarTime(const string sym, ENUM_TIMEFRAMES tf, int shift)
+{
+   datetime arr[];
+   ArraySetAsSeries(arr, true);
+   if (CopyTime(sym, tf, shift, 1, arr) < 1) return 0;
+   return arr[0];
+}
 
 //+------------------------------------------------------------------+
 //| Enums                                                            |
@@ -87,8 +132,8 @@ double GetVWMA(const string sym, ENUM_TIMEFRAMES tf, int period, int shift)
    double sumPV = 0, sumV = 0;
    for (int i = shift; i < shift + period && i < 500; i++)
    {
-      double c = iClose(sym, tf, i);
-      long   v = iVolume(sym, tf, i, VOLUME_REAL);
+      double c = GetPriceClose(sym, tf, i);
+      long   v = GetVolumeReal(sym, tf, i);
       if (v <= 0) v = 1;
       sumPV += c * (double)v;
       sumV  += (double)v;
@@ -105,24 +150,24 @@ double GetAWBVM(const string sym, int lookback, int avgVolumeBars, double &avgVo
 {
    avgVolume = 0;
    for (int k = 1; k <= avgVolumeBars; k++)
-      avgVolume += (double)iVolume(sym, PERIOD_M1, k, VOLUME_REAL);
+      avgVolume += (double)GetVolumeReal(sym, PERIOD_M1, k);
    if (avgVolumeBars > 0) avgVolume /= (double)avgVolumeBars;
 
    double score = 0;
    // Use only closed bars (shift 1 = last closed) to avoid repainting
    for (int iBar = 1; iBar <= lookback; iBar++)
    {
-      double o = iOpen(sym, PERIOD_M1, iBar);
-      double c = iClose(sym, PERIOD_M1, iBar);
-      double h = iHigh(sym, PERIOD_M1, iBar);
-      double l = iLow(sym, PERIOD_M1, iBar);
+      double o = GetPriceOpen(sym, PERIOD_M1, iBar);
+      double c = GetPriceClose(sym, PERIOD_M1, iBar);
+      double h = GetPriceHigh(sym, PERIOD_M1, iBar);
+      double l = GetPriceLow(sym, PERIOD_M1, iBar);
 
       int directionalFactor = (c > o) ? 1 : -1;
       double barRange = h - l;
       double relativeCloseStrength = (barRange > 0.0000001) ?
          MathAbs(c - o) / barRange : 0.0;
 
-      long vol = iVolume(sym, PERIOD_M1, iBar, VOLUME_REAL);
+      long vol = GetVolumeReal(sym, PERIOD_M1, iBar);
       if (vol <= 0) vol = 1;
       double barAggression = (double)vol * relativeCloseStrength * (double)directionalFactor;
       score += barAggression;
@@ -137,7 +182,9 @@ double GetAverageSpread(int lookback)
 {
    double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
    double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
-   double currentSpread = (ask - bid) / _Point;
+   double point = SymbolInfoDouble(_Symbol, SYMBOL_POINT);
+   if (point <= 0) point = _Point;
+   double currentSpread = (point > 0) ? (ask - bid) / point : 0;
 
    if (ArraySize(g_spreadBuffer) < lookback)
       ArrayResize(g_spreadBuffer, lookback);
@@ -295,14 +342,14 @@ double CalcLotSize(double slPoints, double riskPercent)
 //+------------------------------------------------------------------+
 bool IsNewBarM1()
 {
-   datetime t = iTime(_Symbol, PERIOD_M1, 0);
+   datetime t = GetBarTime(_Symbol, PERIOD_M1, 0);
    if (t != g_lastBarTimeM1) { g_lastBarTimeM1 = t; return true; }
    return false;
 }
 
 bool IsNewBarM5()
 {
-   datetime t = iTime(_Symbol, PERIOD_M5, 0);
+   datetime t = GetBarTime(_Symbol, PERIOD_M5, 0);
    if (t != g_lastBarTimeM5) { g_lastBarTimeM5 = t; return true; }
    return false;
 }
@@ -335,7 +382,13 @@ int OnInit()
    }
    g_trade.SetExpertMagicNumber(InpMagicNumber);
    g_trade.SetDeviationInPoints(20);
-   g_trade.SetTypeFilling(ORDER_FILLING_IOC);
+   long fillMode = SymbolInfoInteger(_Symbol, SYMBOL_FILLING_MODE);
+   if ((fillMode & SYMBOL_FILLING_IOC) == SYMBOL_FILLING_IOC)
+      g_trade.SetTypeFilling(ORDER_FILLING_IOC);
+   else if ((fillMode & SYMBOL_FILLING_FOK) == SYMBOL_FILLING_FOK)
+      g_trade.SetTypeFilling(ORDER_FILLING_FOK);
+   else
+      g_trade.SetTypeFilling(ORDER_FILLING_RETURN);
    ArrayResize(g_spreadBuffer, MathMax(InpSpread_Lookback_M1, 10));
    ArrayInitialize(g_spreadBuffer, 0);
    return INIT_SUCCEEDED;
@@ -357,7 +410,9 @@ void OnTick()
    if (!g_symbol.RefreshRates()) return;
 
    double avgSpread = GetAverageSpread(InpSpread_Lookback_M1);
-   double currentSpread = (SymbolInfoDouble(_Symbol, SYMBOL_ASK) - SymbolInfoDouble(_Symbol, SYMBOL_BID)) / _Point;
+   double point = SymbolInfoDouble(_Symbol, SYMBOL_POINT);
+   if (point <= 0) point = _Point;
+   double currentSpread = (point > 0) ? (SymbolInfoDouble(_Symbol, SYMBOL_ASK) - SymbolInfoDouble(_Symbol, SYMBOL_BID)) / point : 0;
    if (currentSpread > InpMaxSpreadPoints) return;
    if (avgSpread > 0 && currentSpread > avgSpread * InpMaxSpreadMultiplier) return;
 
@@ -382,6 +437,7 @@ void OnTick()
    double avgVolM1 = 0;
    double awbvmScore = GetAWBVM(_Symbol, InpAWBVM_Lookback, InpAWBVM_AvgVolumeBars, avgVolM1);
    double threshold = avgVolM1 * InpAWBVM_Activation_Mult;
+   if (avgVolM1 <= 0) return;  // no volume data, skip to avoid false signals
 
    double vwmaShortM1 = GetVWMA(_Symbol, PERIOD_M1, InpShort_VWMA_Period, 1);
    double vwmaLongM1  = GetVWMA(_Symbol, PERIOD_M1, InpLong_VWMA_Period,  1);
@@ -391,8 +447,9 @@ void OnTick()
    double slMult = InpSL_ATR_Mult_M1 * GetRegimeSLMultiplier(regime);
    double slDist = atrM1 * slMult;
    double tpDist = atrM1 * InpTP_ATR_Mult_M1;
-   double slPoints = slDist / _Point;
-   double tpPoints = tpDist / _Point;
+   double point = SymbolInfoDouble(_Symbol, SYMBOL_POINT);
+   if (point <= 0) point = _Point;
+   double slPoints = (point > 0) ? slDist / point : 0;
 
    // Only open on new M1 bar to avoid multiple entries per bar
    if (newM1)
@@ -402,22 +459,24 @@ void OnTick()
       bool bullish = !skipRegime && (vwmaShortM1 > vwmaLongM1) && (awbvmScore > threshold);
       bool bearish = !skipRegime && (vwmaShortM1 < vwmaLongM1) && (awbvmScore < -threshold);
 
-      if (bullish && CountPositions(POSITION_TYPE_BUY) == 0)
+      if (bullish && CountPositions(POSITION_TYPE_BUY) == 0 && slPoints > 0)
       {
          double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
-         double sl = NormalizeDouble(ask - slDist, (int)SymbolInfoInteger(_Symbol, SYMBOL_DIGITS));
-         double tp = NormalizeDouble(ask + tpDist, (int)SymbolInfoInteger(_Symbol, SYMBOL_DIGITS));
+         int digits = (int)SymbolInfoInteger(_Symbol, SYMBOL_DIGITS);
+         double sl = NormalizeDouble(ask - slDist, digits);
+         double tp = NormalizeDouble(ask + tpDist, digits);
          double lots = CalcLotSize(slPoints, InpRiskPercent);
-         if (g_trade.Buy(lots, _Symbol, ask, sl, tp, "AMIS"))
+         if (lots >= InpMinLotSize && g_trade.Buy(lots, _Symbol, ask, sl, tp, "AMIS"))
             Print("AMIS BUY lots=", lots, " regime=", EnumToString(regime));
       }
-      else if (bearish && CountPositions(POSITION_TYPE_SELL) == 0)
+      else if (bearish && CountPositions(POSITION_TYPE_SELL) == 0 && slPoints > 0)
       {
          double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
-         double sl = NormalizeDouble(bid + slDist, (int)SymbolInfoInteger(_Symbol, SYMBOL_DIGITS));
-         double tp = NormalizeDouble(bid - tpDist, (int)SymbolInfoInteger(_Symbol, SYMBOL_DIGITS));
+         int digits = (int)SymbolInfoInteger(_Symbol, SYMBOL_DIGITS);
+         double sl = NormalizeDouble(bid + slDist, digits);
+         double tp = NormalizeDouble(bid - tpDist, digits);
          double lots = CalcLotSize(slPoints, InpRiskPercent);
-         if (g_trade.Sell(lots, _Symbol, bid, sl, tp, "AMIS"))
+         if (lots >= InpMinLotSize && g_trade.Sell(lots, _Symbol, bid, sl, tp, "AMIS"))
             Print("AMIS SELL lots=", lots, " regime=", EnumToString(regime));
       }
    }

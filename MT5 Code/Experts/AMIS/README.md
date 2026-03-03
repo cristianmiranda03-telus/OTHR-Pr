@@ -16,7 +16,8 @@ MetaTrader 5 Expert Advisor for **BTCUSD** and **XAUUSD**, implementing the thre
 1. Copy the `AMIS` folder into `MQL5/Experts/`.
 2. Compile `AMIS.mq5` in MetaEditor (F7).
 3. Attach the EA to an M1 chart of BTCUSD or XAUUSD.
-4. Enable "Allow Algo Trading" and set inputs as needed.
+4. Enable **Allow Algo Trading** (button in MT5 toolbar).
+5. **To avoid popup windows**: In MT5 go to **Tools → Options → Expert Advisors** and uncheck **"Confirm trade"** so the EA can place orders without confirmation dialogs.
 
 ## Main inputs
 
