@@ -44,3 +44,10 @@ Copia cada carpeta (ej. `Supertrend_Signals`) dentro de la carpeta **Indicators*
 - **Menos lag:** VWAP_Bands, Daily_Pivots, Hull_MA_Signals.
 - **Señales directas (flechas):** Supertrend_Signals, RSI_Zones, Hull_MA_Signals.
 - **Visualización de tendencia:** EMA_Ribbon, Supertrend_Signals, Hull_MA_Signals.
+
+---
+
+## Estrategias (oro scalping)
+
+Guía en formato MT5 (comentarios, sin errores al compilar): **`Strategies/Strategies_Guide.mqh`**.  
+EAs/indicadores: `GOLD_*_MACD_Engulf_M1.mq5`, `JumpEntropy_Regime.mq5`, etc. en `Experts/` e `Indicators/`.

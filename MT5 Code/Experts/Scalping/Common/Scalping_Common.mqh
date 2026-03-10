@@ -37,6 +37,20 @@ bool SC_IsAnyActiveSession(int utcOffset = 0)
    return SC_IsLondonSession(utcOffset) || SC_IsNYSession(utcOffset);
 }
 
+// Asian session in pure UTC (Tokyo ~00:00-09:00 UTC). Use for XAU night in Americas (UTC-6).
+// If startHour > endHour, window wraps midnight (e.g. 22 -> 06 next day).
+bool SC_IsAsianSessionUTC(int startHourUTC, int endHourUTC)
+{
+   MqlDateTime dt;
+   TimeToStruct(TimeGMT(), dt);
+   int h = dt.hour;
+   if (startHourUTC < endHourUTC)
+      return (h >= startHourUTC && h < endHourUTC);
+   if (startHourUTC > endHourUTC)
+      return (h >= startHourUTC || h < endHourUTC);
+   return (h == startHourUTC);
+}
+
 //+------------------------------------------------------------------+
 //| Price helpers (no-repaint: shift 1 = last closed bar)            |
 //+------------------------------------------------------------------+
