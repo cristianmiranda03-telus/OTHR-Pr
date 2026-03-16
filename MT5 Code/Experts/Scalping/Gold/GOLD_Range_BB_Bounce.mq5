@@ -33,6 +33,10 @@ input group "=== Session & Trade ==="
 input int    InpUTCOffset      = 0;
 input int    InpMagic          = 100003;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MaxScore = 1;      // Max trend score to allow range trade (0=flat, 1=loose)
+
 CTrade  g_trade;
 datetime g_lastBarM5 = 0;
 
@@ -50,6 +54,7 @@ void OnTick()
    if (!SC_SpreadOK(InpMaxSpread)) return;
    if (!SC_IsNewBar(PERIOD_M5, g_lastBarM5)) return;
    if (SC_TotalPositions(InpMagic) > 0) return;
+   if (InpUseMTF && !SC_MTF_RangeOK(_Symbol, InpMTF_MaxScore)) return;
 
    double upper, middle, lower;
    SC_GetBB(_Symbol, PERIOD_M5, InpBB_Period, InpBB_Dev, 1, upper, middle, lower);

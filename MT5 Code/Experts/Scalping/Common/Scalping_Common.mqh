@@ -298,3 +298,112 @@ ENUM_ORDER_TYPE_FILLING SC_GetFillMode()
    if ((fm & SYMBOL_FILLING_FOK) == SYMBOL_FILLING_FOK) return ORDER_FILLING_FOK;
    return ORDER_FILLING_RETURN;
 }
+
+//+------------------------------------------------------------------+
+//| ADX helper                                                       |
+//+------------------------------------------------------------------+
+double SC_GetADX(const string sym, ENUM_TIMEFRAMES tf, int period, int shift = 1)
+{
+   double buf[]; ArraySetAsSeries(buf, true);
+   int h = iADX(sym, tf, period);
+   if (h == INVALID_HANDLE) return 0;
+   double v = (CopyBuffer(h, 0, shift, 1, buf) >= 1) ? buf[0] : 0;
+   IndicatorRelease(h);
+   return v;
+}
+
+double SC_GetADX_PlusDI(const string sym, ENUM_TIMEFRAMES tf, int period, int shift = 1)
+{
+   double buf[]; ArraySetAsSeries(buf, true);
+   int h = iADX(sym, tf, period);
+   if (h == INVALID_HANDLE) return 0;
+   double v = (CopyBuffer(h, 1, shift, 1, buf) >= 1) ? buf[0] : 0;
+   IndicatorRelease(h);
+   return v;
+}
+
+double SC_GetADX_MinusDI(const string sym, ENUM_TIMEFRAMES tf, int period, int shift = 1)
+{
+   double buf[]; ArraySetAsSeries(buf, true);
+   int h = iADX(sym, tf, period);
+   if (h == INVALID_HANDLE) return 0;
+   double v = (CopyBuffer(h, 2, shift, 1, buf) >= 1) ? buf[0] : 0;
+   IndicatorRelease(h);
+   return v;
+}
+
+//+------------------------------------------------------------------+
+//| MTF Trend Scoring — D1 / H1 / M15                               |
+//|                                                                  |
+//| Each timeframe returns: +1 (bullish), -1 (bearish), 0 (neutral) |
+//|                                                                  |
+//| D1 : price > EMA50 AND EMA20 > EMA50                            |
+//| H1 : EMA21 > EMA50 AND ADX(14) > 20 AND +DI > -DI              |
+//| M15: EMA8  > EMA21 AND ADX(14) > 18                             |
+//|                                                                  |
+//| SC_MTF_Score() returns -3..+3                                   |
+//|  +3 = all 3 TFs bullish   -3 = all 3 TFs bearish               |
+//|  0  = mixed / ranging                                           |
+//+------------------------------------------------------------------+
+int SC_TrendDir_D1(const string sym)
+{
+   double close = SC_Close(sym, PERIOD_D1, 1);
+   double ema20 = SC_GetEMA(sym, PERIOD_D1, 20, 1);
+   double ema50 = SC_GetEMA(sym, PERIOD_D1, 50, 1);
+   if (ema20 <= 0 || ema50 <= 0) return 0;
+   if (close > ema50 && ema20 > ema50) return  1;
+   if (close < ema50 && ema20 < ema50) return -1;
+   return 0;
+}
+
+int SC_TrendDir_H1(const string sym)
+{
+   double close  = SC_Close(sym, PERIOD_H1, 1);
+   double ema21  = SC_GetEMA(sym, PERIOD_H1, 21, 1);
+   double ema50  = SC_GetEMA(sym, PERIOD_H1, 50, 1);
+   double adx    = SC_GetADX(sym, PERIOD_H1, 14, 1);
+   double plusDI = SC_GetADX_PlusDI(sym,  PERIOD_H1, 14, 1);
+   double minDI  = SC_GetADX_MinusDI(sym, PERIOD_H1, 14, 1);
+   if (ema21 <= 0 || ema50 <= 0) return 0;
+   bool trending = (adx >= 20.0);
+   if (ema21 > ema50 && close > ema21 && (!trending || plusDI > minDI)) return  1;
+   if (ema21 < ema50 && close < ema21 && (!trending || minDI > plusDI)) return -1;
+   return 0;
+}
+
+int SC_TrendDir_M15(const string sym)
+{
+   double close = SC_Close(sym, PERIOD_M15, 1);
+   double ema8  = SC_GetEMA(sym, PERIOD_M15, 8,  1);
+   double ema21 = SC_GetEMA(sym, PERIOD_M15, 21, 1);
+   double adx   = SC_GetADX(sym, PERIOD_M15, 14, 1);
+   if (ema8 <= 0 || ema21 <= 0) return 0;
+   if (ema8 > ema21 && close > ema8)  return  1;
+   if (ema8 < ema21 && close < ema8)  return -1;
+   return 0;
+}
+
+// Sum of D1 + H1 + M15 scores → range -3 to +3
+int SC_MTF_Score(const string sym)
+{
+   return SC_TrendDir_D1(sym) + SC_TrendDir_H1(sym) + SC_TrendDir_M15(sym);
+}
+
+// Returns true if at least 'minScore' timeframes agree bullish
+bool SC_MTF_BullOK(const string sym, int minScore = 1)
+{
+   return (SC_MTF_Score(sym) >= minScore);
+}
+
+// Returns true if at least 'minScore' timeframes agree bearish
+bool SC_MTF_BearOK(const string sym, int minScore = 1)
+{
+   return (SC_MTF_Score(sym) <= -minScore);
+}
+
+// Returns true for range EAs: market NOT strongly directional
+// maxScore=1 means at most 1 TF is directional (score -1..+1)
+bool SC_MTF_RangeOK(const string sym, int maxScore = 1)
+{
+   return (MathAbs(SC_MTF_Score(sym)) <= maxScore);
+}

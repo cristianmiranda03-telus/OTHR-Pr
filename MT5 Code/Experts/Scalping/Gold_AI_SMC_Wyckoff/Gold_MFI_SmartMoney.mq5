@@ -36,6 +36,10 @@ input int    InpMaxSpread   = 80;
 input group "=== Trade ==="
 input int    InpMagic       = 102003;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min score magnitude to take directional trade (1-3)
+
 CTrade   g_trade;
 datetime g_lastBar = 0;
 
@@ -64,6 +68,8 @@ void OnTick()
    if (!SC_IsNewBar(InpTF, g_lastBar)) return;
    if (SC_TotalPositions(InpMagic) > 0) return;
 
+   int mtfScore = InpUseMTF ? SC_MTF_Score(_Symbol) : 0;
+
    double mfi = Math_MFI(_Symbol, InpTF, InpMFI_Period, 1);
    double mfiPrev = Math_MFI(_Symbol, InpTF, InpMFI_Period, 2);
    double atr = SC_GetATR(_Symbol, InpTF, InpATR_Period, 1);
@@ -71,7 +77,7 @@ void OnTick()
 
    int digits = (int)SymbolInfoInteger(_Symbol, SYMBOL_DIGITS);
 
-   if (mfi <= InpMFI_Oversold && mfiPrev <= InpMFI_Oversold)
+   if (mfi <= InpMFI_Oversold && mfiPrev <= InpMFI_Oversold && mtfScore >= -InpMTF_MinScore)
    {
       double ask = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
       double sl = NormalizeDouble(ask - atr * InpSL_ATR, digits);
@@ -85,7 +91,7 @@ void OnTick()
       return;
    }
 
-   if (mfi >= InpMFI_Overbought && mfiPrev >= InpMFI_Overbought)
+   if (mfi >= InpMFI_Overbought && mfiPrev >= InpMFI_Overbought && mtfScore <= InpMTF_MinScore)
    {
       double bid = SymbolInfoDouble(_Symbol, SYMBOL_BID);
       double sl = NormalizeDouble(bid + atr * InpSL_ATR, digits);

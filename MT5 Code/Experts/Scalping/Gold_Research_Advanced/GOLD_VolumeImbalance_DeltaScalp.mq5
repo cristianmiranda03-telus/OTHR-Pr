@@ -65,6 +65,10 @@ input int    InpMaxSpread            = 80;
 input group "=== Trade ==="
 input int    InpMagic                = 110004;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min score magnitude to take directional trade (1-3)
+
 CTrade   g_trade;
 datetime g_lastBar = 0;
 
@@ -91,6 +95,8 @@ void OnTick()
    if (!InSession()) return;
    if (!SC_IsNewBar(InpTF, g_lastBar)) return;
    if (SC_TotalPositions(InpMagic) > 0) return;
+
+   int mtfScore = InpUseMTF ? SC_MTF_Score(_Symbol) : 0;
 
    // Volume delta analysis
    int  streak     = GRM_DeltaStreak(_Symbol, InpTF, InpStreakMax + 2, 1);
@@ -127,7 +133,8 @@ void OnTick()
                     && bullRatio >= InpImbalanceRatioMin
                     && close > ema
                     && rsi >= InpRSI_Long_Min
-                    && volSpike;
+                    && volSpike
+                    && (mtfScore >= -InpMTF_MinScore);
 
    // Short signal: bear streak + high bear imbalance + price below EMA + RSI ok + vol spike
    bool shortSignal = bearStreak
@@ -135,7 +142,8 @@ void OnTick()
                     && bearRatio >= InpImbalanceRatioMin
                     && close < ema
                     && rsi <= InpRSI_Short_Max
-                    && volSpike;
+                    && volSpike
+                    && (mtfScore <= InpMTF_MinScore);
 
    if (longSignal)
    {

@@ -51,6 +51,10 @@ input group "=== Sesion ==="
 input int    InpUTCOffset        = 0;
 input int    InpMagic            = 110003;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min TFs aligned bullish: 1=loose, 2=medium, 3=strict
+
 CTrade   g_trade;
 datetime g_lastBarM5 = 0;
 
@@ -69,6 +73,7 @@ void OnTick()
    if (!SC_IsNewBar(PERIOD_M5, g_lastBarM5)) return;
    if (!SC_IsLondonSession(InpUTCOffset) && !SC_IsNYSession(InpUTCOffset)) return;
    if (SC_TotalPositions(InpMagic) > 0) return;
+   if (InpUseMTF && !SC_MTF_BullOK(_Symbol, InpMTF_MinScore)) return;
 
    // Datos de las ultimas 2 barras M5
    double close1 = SC_Close(_Symbol, PERIOD_M5, 1); // barra actual (cerrada)

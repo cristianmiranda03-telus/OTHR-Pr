@@ -62,6 +62,10 @@ input group "=== Sesion ==="
 input int    InpUTCOffset        = 0;
 input int    InpMagic            = 120004;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min TFs aligned bearish: 1=loose, 2=medium, 3=strict
+
 CTrade   g_trade;
 datetime g_lastBarM5 = 0;
 
@@ -102,6 +106,7 @@ void OnTick()
    if (!SC_IsNewBar(PERIOD_M5, g_lastBarM5)) return;
    if (!SC_IsLondonSession(InpUTCOffset) && !SC_IsNYSession(InpUTCOffset)) return;
    if (SC_TotalPositions(InpMagic) > 0) return;
+   if (InpUseMTF && !SC_MTF_BearOK(_Symbol, InpMTF_MinScore)) return;
 
    double macd1, sig1, macd2, sig2;
    SC_GetMACD(_Symbol, PERIOD_M5, InpMACD_Fast, InpMACD_Slow, InpMACD_Signal, 1, macd1, sig1);

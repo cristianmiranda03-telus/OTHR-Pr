@@ -56,6 +56,10 @@ input int    InpMaxSpread        = 80;
 input group "=== Trade ==="
 input int    InpMagic            = 110001;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min score magnitude to take directional trade (1-3)
+
 CTrade   g_trade;
 datetime g_lastBar   = 0;
 
@@ -186,13 +190,15 @@ void OnTick()
    bool longSignal  = (g_prevSlope <= 0 && entrySlope > 0)
                     && htfSlope > 0
                     && absSlope >= InpMinSlopeATR
-                    && rsi >= InpRSILongMin;
+                    && rsi >= InpRSILongMin
+                    && (!InpUseMTF || SC_MTF_BullOK(_Symbol, InpMTF_MinScore));
 
    // Short: entry slope crossed zero downward + HTF also negative + RSI bearish zone
    bool shortSignal = (g_prevSlope >= 0 && entrySlope < 0)
                     && htfSlope < 0
                     && absSlope >= InpMinSlopeATR
-                    && rsi <= InpRSIShortMax;
+                    && rsi <= InpRSIShortMax
+                    && (!InpUseMTF || SC_MTF_BearOK(_Symbol, InpMTF_MinScore));
 
    g_prevSlope = entrySlope;
 

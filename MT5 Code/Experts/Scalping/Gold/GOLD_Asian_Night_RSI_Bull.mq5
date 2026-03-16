@@ -33,6 +33,10 @@ input int    InpMaxSpread   = 100;
 input group "=== Trade ==="
 input int    InpMagic       = 101101;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min TFs aligned bullish: 1=loose, 2=medium, 3=strict
+
 CTrade   g_trade;
 datetime g_lastBar = 0;
 
@@ -68,6 +72,7 @@ void OnTick()
    if (!SC_IsAsianSessionUTC(InpAsianStartUTC, InpAsianEndUTC)) return;
    if (!NewBarTF(InpTF, g_lastBar)) return;
    if (SC_TotalPositions(InpMagic) > 0) return;
+   if (InpUseMTF && !SC_MTF_BullOK(_Symbol, InpMTF_MinScore)) return;
 
    double rsi1 = SC_GetRSI(_Symbol, InpTF, InpRSI_Period, 1);
    double rsi2 = SC_GetRSI(_Symbol, InpTF, InpRSI_Period, 2);

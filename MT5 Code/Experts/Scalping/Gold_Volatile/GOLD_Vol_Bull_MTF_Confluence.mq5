@@ -34,6 +34,8 @@
 input group "=== M15 Contexto Macro ==="
 input int    InpM15_EMA_Fast     = 21;
 input int    InpM15_EMA_Slow     = 50;
+input bool   InpUseMTF       = true;   // Activar filtro D1+H1 adicional al M15
+input int    InpMTF_MinScore = 2;      // Min score total D1+H1+M15 (recomendado: 2)
 
 input group "=== M5 Tendencia Intermedia ==="
 input int    InpM5_EMA_Fast      = 8;
@@ -100,6 +102,7 @@ void OnTick()
    bool   m15_bull  = (m15_ema21 > m15_ema50) && (m15_close > m15_ema21);
 
    if (!m15_bull) return; // Sin tendencia M15 alcista, no operar
+   if (InpUseMTF && !SC_MTF_BullOK(_Symbol, InpMTF_MinScore)) return;
 
    //--- NIVEL 2: M5 micro-tendencia alcista
    double m5_ema8   = SC_GetEMA(_Symbol, PERIOD_M5, InpM5_EMA_Fast, 1);

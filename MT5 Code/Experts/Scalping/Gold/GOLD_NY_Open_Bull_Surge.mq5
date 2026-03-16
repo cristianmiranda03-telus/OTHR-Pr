@@ -1,3 +1,4 @@
+
 //+------------------------------------------------------------------+
 //| GOLD_NY_Open_Bull_Surge.mq5                                      |
 //| Strategy: New York Open BULLISH Surge Scalper                    |
@@ -32,6 +33,10 @@ input group "=== Session & Trade ==="
 input int    InpUTCOffset      = 0;
 input int    InpMagic          = 100006;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min TFs aligned bullish: 1=loose, 2=medium, 3=strict
+
 CTrade  g_trade;
 datetime g_lastBarM5 = 0;
 bool     g_entryDone = false;
@@ -61,6 +66,7 @@ void OnTick()
    // Window: 13:00 - 14:00 UTC
    if (minOfDay < 13 * 60 || minOfDay > 13 * 60 + InpEntryWindowMin) return;
    if (g_entryDone || SC_TotalPositions(InpMagic) > 0) return;
+   if (InpUseMTF && !SC_MTF_BullOK(_Symbol, InpMTF_MinScore)) return;
 
    double sma   = SC_GetSMA(_Symbol, PERIOD_M5, InpSMA_Period, 1);
    double close = SC_Close(_Symbol, PERIOD_M5, 1);

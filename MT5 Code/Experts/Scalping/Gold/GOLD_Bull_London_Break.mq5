@@ -30,6 +30,10 @@ input group "=== Session & Trade ==="
 input int    InpUTCOffset      = 0;
 input int    InpMagic          = 100004;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min TFs aligned bullish: 1=loose, 2=medium, 3=strict
+
 CTrade  g_trade;
 datetime g_lastBarM15 = 0;
 double   g_preHigh    = 0;
@@ -77,6 +81,7 @@ void OnTick()
    {
       if (g_preHigh <= 0 || g_entryDone) return;
       if (SC_TotalPositions(InpMagic) > 0) return;
+      if (InpUseMTF && !SC_MTF_BullOK(_Symbol, InpMTF_MinScore)) return;
 
       double close  = SC_Close(_Symbol, PERIOD_M15, 1);
       double vol    = (double)SC_Volume(_Symbol, PERIOD_M15, 1);

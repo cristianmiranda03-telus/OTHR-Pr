@@ -73,6 +73,10 @@ input int    InpMaxSpread            = 80;
 input group "=== Trade ==="
 input int    InpMagic                = 110005;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min score magnitude to take directional trade (1-3)
+
 //--- State machine enum
 enum StateMachine
 {
@@ -134,6 +138,8 @@ void OnTick()
    if (!SC_IsNewBar(InpTF, g_lastBar)) return;
    if (SC_TotalPositions(InpMagic) > 0) { g_state = SM_SCAN; return; }
 
+   int mtfScore = InpUseMTF ? SC_MTF_Score(_Symbol) : 0;
+
    double emaFast = SC_GetEMA(_Symbol, InpTF, InpEMAFast, 1);
    double emaSlow = SC_GetEMA(_Symbol, InpTF, InpEMASlow, 1);
    double atr     = SC_GetATR(_Symbol, InpTF, InpATR_Period, 1);
@@ -154,13 +160,15 @@ void OnTick()
          bool bullTrend = (emaFast > emaSlow)
                         && (adx >= InpADXMinThreshold)
                         && (plusDI > minusDI)
-                        && (CountConsecutiveCandles(1) >= InpConsecCandles);
+                        && (CountConsecutiveCandles(1) >= InpConsecCandles)
+                        && (mtfScore >= -InpMTF_MinScore);
 
          // Detect bearish trend
          bool bearTrend = (emaFast < emaSlow)
                         && (adx >= InpADXMinThreshold)
                         && (minusDI > plusDI)
-                        && (CountConsecutiveCandles(-1) >= InpConsecCandles);
+                        && (CountConsecutiveCandles(-1) >= InpConsecCandles)
+                        && (mtfScore <= InpMTF_MinScore);
 
          if (bullTrend || bearTrend)
          {

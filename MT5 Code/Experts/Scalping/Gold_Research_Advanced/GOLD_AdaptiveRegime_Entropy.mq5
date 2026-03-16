@@ -86,6 +86,10 @@ input int    InpMaxSpread             = 80;
 input group "=== Trade ==="
 input int    InpMagic                 = 110006;
 
+input group "=== MTF D1 Macro Filter ==="
+input bool   InpUseMTF    = true;   // Enable daily trend macro filter
+input int    InpMTF_D1Min = 0;      // D1 min score (-1=bear ok, 0=neutral ok, 1=bull only)
+
 CTrade   g_trade;
 datetime g_lastBar = 0;
 
@@ -153,6 +157,8 @@ void OnTick()
    if (!InSession()) return;
    if (!SC_IsNewBar(InpTF, g_lastBar)) return;
    if (SC_TotalPositions(InpMagic) > 0) return;
+
+   if (InpUseMTF && SC_TrendDir_D1(_Symbol) < InpMTF_D1Min) return;
 
    double plusDI, minusDI;
    double adx      = GRM_GetADXFull(_Symbol, InpTF, InpADX_Period, 1, plusDI, minusDI);

@@ -30,6 +30,10 @@ input group "=== Session & Trade ==="
 input int    InpUTCOffset      = 0;
 input int    InpMagic          = 100008;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min score to take a directional trade (1-3)
+
 CTrade   g_trade;
 datetime g_lastBarM15 = 0;
 double   g_asianHigh  = 0;
@@ -76,6 +80,7 @@ void OnTick()
    // Entry: 07:00 to 09:00 UTC
    if (minOfDay < 7 * 60 || minOfDay > 7 * 60 + InpEntryWindowMin) return;
    if (g_asianHigh <= 0 || g_asianLow >= 1e9) return;
+   int g_mtfScore = InpUseMTF ? SC_MTF_Score(_Symbol) : 0;
 
    double close = SC_Close(_Symbol, PERIOD_M15, 1);
    double atr   = SC_GetATR(_Symbol, PERIOD_M15, InpATR_Period, 1);
@@ -86,7 +91,7 @@ void OnTick()
 
    // Bullish break
    if (!g_bullDone && SC_CountPositions(POSITION_TYPE_BUY, InpMagic) == 0
-       && close > g_asianHigh + buf)
+       && close > g_asianHigh + buf && g_mtfScore >= -InpMTF_MinScore)
    {
       double ask  = SymbolInfoDouble(_Symbol, SYMBOL_ASK);
       double sl   = NormalizeDouble(g_asianHigh - atr * InpSL_ATR_Mult, digits);
@@ -99,7 +104,7 @@ void OnTick()
    }
    // Bearish break
    if (!g_bearDone && SC_CountPositions(POSITION_TYPE_SELL, InpMagic) == 0
-       && close < g_asianLow - buf)
+       && close < g_asianLow - buf && g_mtfScore <= InpMTF_MinScore)
    {
       double bid  = SymbolInfoDouble(_Symbol, SYMBOL_BID);
       double sl   = NormalizeDouble(g_asianLow + atr * InpSL_ATR_Mult, digits);

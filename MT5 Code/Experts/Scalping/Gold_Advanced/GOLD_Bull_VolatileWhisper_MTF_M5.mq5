@@ -60,6 +60,8 @@ input int    InpM15_EMA_Fast     = 21;   // EMA M15 rapida
 input int    InpM15_EMA_Slow     = 50;   // EMA M15 lenta
 input int    InpM15_ADX_Period   = 14;
 input double InpM15_ADX_Min      = 20.0; // ADX M15 minimo (alguna direccionalidad)
+input bool   InpUseMTF       = true;   // Activar filtro D1+H1 adicional al M15
+input int    InpMTF_MinScore = 2;      // Min score total D1+H1+M15 (recomendado: 2)
 
 input group "=== Gestion de Riesgo ==="
 input double InpRiskPct          = 0.5;
@@ -223,6 +225,7 @@ void OnTick()
 
    // FILTRO MTF: Solo operar si M15 es alcista
    if (!IsM15BullishTrend()) return;
+   if (InpUseMTF && !SC_MTF_BullOK(_Symbol, InpMTF_MinScore)) return;
 
    double rangeHigh, rangeLow;
    if (!GetConsolRange(InpConsolBars + 5, InpConsolBars, rangeHigh, rangeLow)) return;

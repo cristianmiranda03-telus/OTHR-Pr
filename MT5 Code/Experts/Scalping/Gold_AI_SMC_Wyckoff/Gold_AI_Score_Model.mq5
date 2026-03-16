@@ -44,6 +44,10 @@ input int    InpMaxSpread  = 80;
 input group "=== Trade ==="
 input int    InpMagic      = 102004;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min score magnitude to take directional trade (1-3)
+
 CTrade   g_trade;
 datetime g_lastBar = 0;
 
@@ -100,6 +104,10 @@ void OnTick()
                      + InpW_Entropy * (1.0 - entropy) + InpW_Vol * volNorm;
    double scoreShort = InpW_RSI * normRSI + InpW_MFI * normMFI + InpW_ZScore * zShort
                      + InpW_Entropy * (1.0 - entropy) + InpW_Vol * volNorm;
+
+   int mtfScore = InpUseMTF ? SC_MTF_Score(_Symbol) : 0;
+   if (InpUseMTF && mtfScore <= -InpMTF_MinScore) scoreLong  = 0;
+   if (InpUseMTF && mtfScore >= InpMTF_MinScore)  scoreShort = 0;
 
    if (scoreLong < InpMinScore && scoreShort < InpMinScore) return;
 

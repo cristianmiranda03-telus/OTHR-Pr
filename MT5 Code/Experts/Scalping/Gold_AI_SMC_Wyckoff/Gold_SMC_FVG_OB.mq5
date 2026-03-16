@@ -39,6 +39,10 @@ input int    InpMaxSpread  = 80;
 input group "=== Trade ==="
 input int    InpMagic      = 102001;
 
+input group "=== MTF Trend Filter (D1 / H1 / M15) ==="
+input bool   InpUseMTF       = true;   // Enable multi-timeframe trend filter
+input int    InpMTF_MinScore = 1;      // Min score magnitude to take directional trade (1-3)
+
 CTrade   g_trade;
 datetime g_lastBar = 0;
 
@@ -67,6 +71,8 @@ void OnTick()
    if (!SC_IsNewBar(InpTF, g_lastBar)) return;
    if (SC_TotalPositions(InpMagic) > 0) return;
 
+   int mtfScore = InpUseMTF ? SC_MTF_Score(_Symbol) : 0;
+
    double atr = SC_GetATR(_Symbol, InpTF, InpATR_Period, 1);
    if (atr <= 0) return;
 
@@ -80,7 +86,7 @@ void OnTick()
       double gTop, gBot;
       if (SMC_DetectBullFVG(_Symbol, InpTF, InpFVG_Shift, gTop, gBot))
       {
-         if (c1 >= gBot && c1 <= gTop && ask <= gTop + atr * 0.1)
+         if (c1 >= gBot && c1 <= gTop && ask <= gTop + atr * 0.1 && mtfScore >= -InpMTF_MinScore)
          {
             double sl = NormalizeDouble(gBot - atr * InpSL_ATR, digits);
             double slD = ask - sl;
@@ -95,7 +101,7 @@ void OnTick()
       }
       if (SMC_DetectBearFVG(_Symbol, InpTF, InpFVG_Shift, gTop, gBot))
       {
-         if (c1 >= gBot && c1 <= gTop && bid >= gBot - atr * 0.1)
+         if (c1 >= gBot && c1 <= gTop && bid >= gBot - atr * 0.1 && mtfScore <= InpMTF_MinScore)
          {
             double sl = NormalizeDouble(gTop + atr * InpSL_ATR, digits);
             double slD = sl - bid;
@@ -115,7 +121,7 @@ void OnTick()
       double obH, obL;
       if (SMC_BullOrderBlock(_Symbol, InpTF, 2, atr, InpOB_MinBodyATR, obH, obL))
       {
-         if (c1 >= obL && c1 <= obH && ask <= obH + atr * 0.2)
+         if (c1 >= obL && c1 <= obH && ask <= obH + atr * 0.2 && mtfScore >= -InpMTF_MinScore)
          {
             double sl = NormalizeDouble(obL - atr * InpSL_ATR, digits);
             double slD = ask - sl;
@@ -130,7 +136,7 @@ void OnTick()
       }
       if (SMC_BearOrderBlock(_Symbol, InpTF, 2, atr, InpOB_MinBodyATR, obH, obL))
       {
-         if (c1 >= obL && c1 <= obH && bid >= obL - atr * 0.2)
+         if (c1 >= obL && c1 <= obH && bid >= obL - atr * 0.2 && mtfScore <= InpMTF_MinScore)
          {
             double sl = NormalizeDouble(obH + atr * InpSL_ATR, digits);
             double slD = sl - bid;
