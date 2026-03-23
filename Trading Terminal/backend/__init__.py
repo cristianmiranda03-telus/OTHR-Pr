@@ -1,1 +1,1 @@
-# Project Quasar - Backend
+# Trading Terminal Backend

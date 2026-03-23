@@ -1,0 +1,278 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── CSS Variables ───────────────────────────────────────────── */
+:root {
+  --bg-base:     #050508;
+  --bg-surface:  #0c0c10;
+  --bg-raised:   #111116;
+  --bg-card:     #14141a;
+  --bg-border:   #1e1e28;
+  --bg-border-hi:#2a2a38;
+  --brand:       #b026ff;
+  --brand-dim:   #7c1cb5;
+  --brand-glow:  rgba(176,38,255,0.25);
+  --profit:      #00d26a;
+  --profit-dim:  #00a854;
+  --loss:        #ff3b5c;
+  --loss-dim:    #cc2e49;
+  --neutral:     #f5a623;
+  --cyan:        #00c8ff;
+  --text-base:   #e8e8f0;
+  --text-dim:    #8888a0;
+  --text-muted:  #4a4a60;
+}
+
+/* ─── Base ─────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  background-color: var(--bg-base);
+  color: var(--text-base);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ─── Scrollbar ────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 3px; height: 3px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: #2a2a38; border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: #3a3a50; }
+
+/* ─── Cards ────────────────────────────────────────────────────── */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.card-header {
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--bg-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--bg-surface);
+}
+
+/* ─── Glow Effects ─────────────────────────────────────────────── */
+.border-glow {
+  border-color: var(--brand-dim) !important;
+  box-shadow: 0 0 0 1px var(--brand-dim),
+              0 0 20px var(--brand-glow),
+              inset 0 0 20px rgba(176,38,255,0.03);
+}
+.border-glow-profit {
+  border-color: var(--profit-dim) !important;
+  box-shadow: 0 0 0 1px var(--profit-dim), 0 0 20px rgba(0,210,106,0.2);
+}
+.border-glow-loss {
+  border-color: var(--loss-dim) !important;
+  box-shadow: 0 0 0 1px var(--loss-dim), 0 0 20px rgba(255,59,92,0.2);
+}
+
+/* ─── Tabs ─────────────────────────────────────────────────────── */
+.tab-bar {
+  display: flex;
+  gap: 2px;
+  padding: 0 4px;
+  background: var(--bg-surface);
+  border-bottom: 1px solid var(--bg-border);
+}
+.tab-item {
+  position: relative;
+  padding: 10px 16px;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.15s;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  white-space: nowrap;
+}
+.tab-item:hover { color: var(--text-dim); }
+.tab-item.active {
+  color: var(--brand);
+  border-bottom-color: var(--brand);
+}
+.tab-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 18px;
+  height: 16px;
+  padding: 0 4px;
+  background: var(--brand-glow);
+  border: 1px solid var(--brand-dim);
+  border-radius: 8px;
+  font-size: 9px;
+  font-family: 'JetBrains Mono', monospace;
+  color: var(--brand);
+  margin-left: 5px;
+}
+.tab-badge.profit { background: rgba(0,210,106,0.1); border-color: var(--profit-dim); color: var(--profit); }
+.tab-badge.loss   { background: rgba(255,59,92,0.1);  border-color: var(--loss-dim);   color: var(--loss); }
+
+/* ─── Signal Cards (PolyMarket-inspired) ───────────────────────── */
+.signal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--bg-border);
+  border-radius: 10px;
+  overflow: hidden;
+  transition: border-color 0.2s;
+}
+.signal-card:hover { border-color: var(--bg-border-hi); }
+.signal-card.buy  { border-left: 3px solid var(--profit); }
+.signal-card.sell { border-left: 3px solid var(--loss); }
+.signal-card.hold { border-left: 3px solid var(--text-muted); }
+
+/* ─── Confidence Bar ───────────────────────────────────────────── */
+.confidence-bar { height: 4px; background: var(--bg-border); border-radius: 2px; overflow: hidden; }
+.confidence-bar-fill { height: 100%; border-radius: 2px; transition: width 0.5s ease; }
+.confidence-bar-fill.high   { background: var(--profit); }
+.confidence-bar-fill.medium { background: var(--neutral); }
+.confidence-bar-fill.low    { background: var(--loss); }
+
+/* ─── Status Dots ──────────────────────────────────────────────── */
+.status-dot {
+  display: inline-block; width: 7px; height: 7px; border-radius: 50%;
+}
+.status-dot.active  { background: var(--profit); animation: pulse 2s infinite; box-shadow: 0 0 6px var(--profit); }
+.status-dot.running { background: var(--brand);  animation: pulse 1.2s infinite; box-shadow: 0 0 8px var(--brand); }
+.status-dot.idle    { background: #2a2a38; }
+.status-dot.warning { background: var(--neutral); animation: pulse 1.5s infinite; }
+.status-dot.error   { background: var(--loss);    animation: pulse 1s infinite; }
+
+/* ─── Tables ───────────────────────────────────────────────────── */
+table { width: 100%; border-collapse: collapse; }
+th {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  font-weight: 500;
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--bg-border);
+  background: var(--bg-surface);
+}
+td {
+  padding: 7px 12px;
+  border-bottom: 1px solid rgba(30,30,40,0.6);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+}
+tr:hover td { background-color: rgba(255,255,255,0.018); }
+tr:last-child td { border-bottom: none; }
+
+/* ─── Buttons ──────────────────────────────────────────────────── */
+.btn {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 8px 18px; border-radius: 8px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.06em;
+  text-transform: uppercase; cursor: pointer;
+  transition: all 0.15s; border: 1px solid transparent;
+}
+.btn-approve {
+  background: rgba(0,210,106,0.12);
+  color: var(--profit);
+  border-color: rgba(0,210,106,0.3);
+}
+.btn-approve:hover { background: rgba(0,210,106,0.22); box-shadow: 0 0 16px rgba(0,210,106,0.2); }
+.btn-reject {
+  background: rgba(255,59,92,0.12);
+  color: var(--loss);
+  border-color: rgba(255,59,92,0.3);
+}
+.btn-reject:hover { background: rgba(255,59,92,0.22); box-shadow: 0 0 16px rgba(255,59,92,0.2); }
+.btn-brand {
+  background: rgba(176,38,255,0.15);
+  color: var(--brand);
+  border-color: rgba(176,38,255,0.3);
+}
+.btn-brand:hover { background: rgba(176,38,255,0.25); box-shadow: 0 0 16px var(--brand-glow); }
+
+/* ─── Number Typography ────────────────────────────────────────── */
+.data-value { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 500; }
+.data-label { font-size: 10px; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* ─── Color utilities ──────────────────────────────────────────── */
+.text-profit  { color: var(--profit) !important; }
+.text-loss    { color: var(--loss) !important; }
+.text-neutral { color: var(--neutral) !important; }
+.text-brand   { color: var(--brand) !important; }
+.text-cyan    { color: var(--cyan) !important; }
+.mono         { font-family: 'JetBrains Mono', monospace; }
+
+/* ─── Flash animations ─────────────────────────────────────────── */
+@keyframes flashProfit {
+  0%   { background: rgba(0,210,106,0.15); }
+  100% { background: transparent; }
+}
+@keyframes flashLoss {
+  0%   { background: rgba(255,59,92,0.15); }
+  100% { background: transparent; }
+}
+.flash-profit { animation: flashProfit 1.5s ease-out; }
+.flash-loss   { animation: flashLoss 1.5s ease-out; }
+
+/* ─── Input fields ─────────────────────────────────────────────── */
+.input-field {
+  background: var(--bg-surface);
+  border: 1px solid var(--bg-border);
+  border-radius: 7px;
+  padding: 8px 12px;
+  font-size: 12px;
+  color: var(--text-base);
+  font-family: 'JetBrains Mono', monospace;
+  outline: none;
+  width: 100%;
+  transition: border-color 0.15s;
+}
+.input-field::placeholder { color: var(--text-muted); }
+.input-field:focus { border-color: var(--brand-dim); box-shadow: 0 0 0 3px var(--brand-glow); }
+
+/* ─── Toasts ───────────────────────────────────────────────────── */
+.hot-toast-base {
+  background:    var(--bg-card) !important;
+  color:         var(--text-base) !important;
+  border:        1px solid var(--bg-border-hi) !important;
+  border-radius: 10px !important;
+  font-family:   'Inter', sans-serif !important;
+  font-size:     12px !important;
+  box-shadow:    0 8px 32px rgba(0,0,0,0.5) !important;
+}
+
+/* ─── Metric pill ──────────────────────────────────────────────── */
+.metric-pill {
+  display: inline-flex; align-items: center; gap: 4px;
+  padding: 2px 8px; border-radius: 20px;
+  font-size: 10px; font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+}
+.metric-pill.profit { background: rgba(0,210,106,0.1);  color: var(--profit); border: 1px solid rgba(0,210,106,0.2); }
+.metric-pill.loss   { background: rgba(255,59,92,0.1);   color: var(--loss);   border: 1px solid rgba(255,59,92,0.2); }
+.metric-pill.brand  { background: rgba(176,38,255,0.1);  color: var(--brand);  border: 1px solid rgba(176,38,255,0.2); }
+.metric-pill.neutral{ background: rgba(245,166,35,0.1);  color: var(--neutral);border: 1px solid rgba(245,166,35,0.2); }
+.metric-pill.cyan   { background: rgba(0,200,255,0.1);   color: var(--cyan);   border: 1px solid rgba(0,200,255,0.2); }
+
+/* ─── Misc ─────────────────────────────────────────────────────── */
+.truncate-2 { overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.no-select  { user-select: none; }
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(30,30,40,0.4) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30,30,40,0.4) 1px, transparent 1px);
+  background-size: 24px 24px;
+}

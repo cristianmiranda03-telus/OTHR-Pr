@@ -1,0 +1,109 @@
+ai:
+  fuelix:
+    api_key: ak-qyAEobQmiMYfw2MXXq4ibOzioIql
+    base_url: https://api.fuelix.ai/v1/chat/completions
+    model: gemini-2.5-pro
+  gemini:
+    api_key: ''
+    model: gemini-1.5-pro
+  openai:
+    api_key: ''
+    model: gpt-4o
+  provider: fuelix
+api:
+  cors_origins:
+  - http://localhost:3000
+  - http://127.0.0.1:3000
+  host: 0.0.0.0
+  port: 8000
+backtest:
+  commission_per_lot: 7.0
+  default_end: '2024-12-31'
+  default_start: '2024-01-01'
+  initial_balance: 10000.0
+chromadb:
+  collection_name: trading_memory
+  embedding_model: all-MiniLM-L6-v2
+  path: ./data/chromadb
+explorer:
+  min_trades_for_eval: 20
+  optimization_interval_hours: 6
+  paper_balance: 50000.0
+  promotion_sharpe_threshold: 1.2
+  promotion_winrate_threshold: 0.52
+logging:
+  file: ./logs/trading.log
+  format: '{time:YYYY-MM-DD HH:mm:ss.SSS} | {level} | {name} | {message}'
+  level: INFO
+  retention: 30 days
+  rotation: 100 MB
+mt5:
+  login: 0
+  password: ''
+  path: ''
+  portable: false
+  server: ''
+  timeout: 60000
+  # mode: local | metaapi | demo
+  mode: local
+
+metaapi:
+  token: ''
+  account_id: ''
+  # MetaAPI region: new-york, london, singapore
+  region: new-york
+mt5_files:
+  auto_sync: true
+  experts_path: ''
+  indicators_path: ''
+  scripts_path: ''
+risk:
+  max_daily_loss_pct: 2.0
+  max_drawdown_pct: 5.0
+  max_slippage_points: 3
+  risk_per_trade_pct: 0.5
+  sl_atr_multiplier: 1.5
+  tp_atr_multiplier: 2.5
+  trailing_atr_multiplier: 1.0
+  trailing_stop: true
+scalping:
+  max_spread_pips: 3.0
+  min_atr_pips: 2.0
+  min_spread_pips: 0.3
+  min_volume_ratio: 1.2
+  news_filter: true
+  session_filter: true
+  stop_pips: 5.0
+  target_pips: 8.0
+sessions:
+  forex_open_hour: 0
+  lse:
+    close: '16:30'
+    open: 08:00
+  nyse:
+    close: '20:00'
+    open: '13:30'
+  preferred:
+  - lse
+  - nyse
+  tse:
+    close: 06:00
+    open: 00:00
+trading:
+  max_positions: 5
+  max_positions_per_symbol: 2
+  mode: paper
+  symbols:
+  - EURUSD
+  - GBPUSD
+  - XAUUSD
+  - BTCUSD
+  - USDJPY
+  - NAS100
+  - US30
+  timeframes:
+    primary: M1
+    secondary:
+    - M5
+    - M15
+    - H1

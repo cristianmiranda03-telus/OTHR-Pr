@@ -1,120 +1,143 @@
-# ♠ Quant-Joker Trader v2.0
+# 🤖 Trading Terminal — AI Multi-Agent System
 
-**AI-Powered Agentic Trading Platform** — Dark Joker theme with neon red, green & violet.
-
----
+An autonomous AI trading system for MetaTrader 5 with 8 specialized agents, real-time dashboard, and continuous self-improvement.
 
 ## Architecture
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
-│                    QUANT-JOKER TRADER                       │
-│                                                             │
-│  Frontend (Next.js 14 + Tailwind)   Backend (FastAPI)       │
-│  ┌──────────────────────────┐       ┌──────────────────┐    │
-│  │  Dashboard               │◄─────►│  REST API + WS   │    │
-│  │  ├─ AgentFlowModule      │       │  ├─ /api/agents  │    │
-│  │  ├─ StrategyListModule   │       │  ├─ /api/mt5     │    │
-│  │  ├─ TradeManagerModule   │       │  ├─ /api/market  │    │
-│  │  ├─ ChartModule          │       │  ├─ /api/news    │    │
-│  │  ├─ NewsModule           │       │  └─ /api/strategies   │
-│  │  ├─ RiskModule           │       └──────────────────┘    │
-│  │  └─ SessionsModule       │                │              │
-│  └──────────────────────────┘                │              │
-│                                      ┌───────▼──────┐       │
-│                                      │  AI AGENTS   │       │
-│                                      │ Orchestrator │       │
-│                                      │ News Agent   │       │
-│                                      │ Strategy Agt │       │
-│                                      │ Backtest Agt │       │
-│                                      │ Perf Agent   │       │
-│                                      │ Trade Mgr    │       │
-│                                      └───────┬──────┘       │
-│                                              │              │
-│                                      ┌───────▼──────┐       │
-│                                      │  MetaTrader5 │       │
-│                                      │  (live data) │       │
-│                                      └──────────────┘       │
-└─────────────────────────────────────────────────────────────┘
+│                        ORCHESTRATOR                         │
+│                    (CEO / Agent Manager)                    │
+└────────┬────────┬────────┬────────┬────────┬───────────────┘
+         │        │        │        │        │
+    ┌────▼──┐ ┌───▼──┐ ┌───▼──┐ ┌───▼──┐ ┌───▼──┐
+    │Quant  │ │News  │ │Risk  │ │MT5   │ │Memory│
+    │Analyst│ │Sentin│ │Mgr   │ │Exec  │ │Agent │
+    └───────┘ └──────┘ └──────┘ └──────┘ └──────┘
+         │                                    │
+    ┌────▼──┐                           ┌─────▼──┐
+    │Explorer│                          │ChromaDB│
+    │(Rsrch) │                          │(Local) │
+    └────────┘                          └────────┘
+         │
+    ┌────▼────┐
+    │DataClean│
+    └─────────┘
 ```
 
-## AI Agent System
+## Quick Start
 
-| Agent | Role |
-|---|---|
-| **Orchestrator** | Master controller — runs full cycles, coordinates all agents, makes final trade decisions |
-| **News Intelligence** | Fetches & analyzes financial news, scores market sentiment per pair |
-| **Strategy Research** | Recommends optimal strategies based on current market regime |
-| **Backtesting Engine** | Tests strategies on MT5 historical data, ranks by composite score |
-| **Performance Optimizer** | Evaluates live P&L, adjusts strategy allocation and risk settings |
-| **Trade Manager** | Monitors open positions, closes risky trades, executes multi-signal batches |
+### 1. Install Dependencies
 
-## Strategy Library (21 strategies)
-
-| Category | Strategies |
-|---|---|
-| **Basic** | RSI OB/OS, SMA Cross, EMA Cross, MACD Signal, Bollinger Breakout, Stochastic Cross |
-| **Advanced** | RSI+MACD Confluence, Ichimoku Cloud, Pivot Bounce, ATR Breakout, Mean Reversion, Fibonacci, VWAP |
-| **Quant** | Momentum Factor, Carry Trade, Volatility Regime, Pairs Cointegration, Kalman Filter |
-| **AI/ML** | Random Forest (multi-vote), Gradient Boost, LSTM Sequence, RL PPO, LLM Sentiment |
-
-## Setup
-
-### Prerequisites
-- Python 3.11+
-- Node.js 18+
-- MetaTrader 5 terminal (optional — demo mode available)
-
-### Backend
 ```bash
-cd backend
-pip install -r requirements.txt
+# Backend
+pip install -r backend/requirements.txt
+
+# Frontend
+cd frontend && npm install
 ```
 
-### Frontend
+### 2. Configure MT5 Account
+
+Edit `backend/config/settings.yaml`:
+```yaml
+mt5:
+  login: YOUR_ACCOUNT_NUMBER
+  password: "YOUR_PASSWORD"
+  server: "YOUR_BROKER_SERVER"   # e.g. "ICMarkets-Demo"
+```
+
+Or use CLI:
 ```bash
-cd frontend
-npm install
+python run.py --login 12345 --password secret --server ICMarkets-Demo
 ```
 
-### Run
+### 3. Start the System
+
 ```bash
-python run_quasar.py
+# Paper trading (safe to test)
+python run.py --paper
+
+# With auto-start trading
+python run.py --paper --auto-start
+
+# Specific symbols
+python run.py --paper --symbols EURUSD GBPUSD XAUUSD
+
+# Live trading (⚠ CAUTION - real money)
+python run.py --live
 ```
 
-Opens http://localhost:3000 automatically.
+### 4. Open Dashboard
 
-## AI Provider
+Navigate to **http://localhost:3000**
 
-Currently uses **Fuelix** (OpenAI-compatible API):
-- Base URL: `https://api.fuelix.ai/v1`
-- Model: `gemini-3-pro`
+---
 
-To switch to GPT-4 or Gemini, set in `.env`:
-```env
-AI_PROVIDER=openai
-OPENAI_API_KEY=sk-...
-OPENAI_MODEL=gpt-4o
-```
+## The 8 Agents
 
-## Usage
+| # | Agent | Role | Key Capability |
+|---|-------|------|----------------|
+| 1 | **Orchestrator** | CEO | Veto authority, global state, workflow |
+| 2 | **Technical Analyst** | Quant | Multi-TF analysis, pattern detection, LLM enhancement |
+| 3 | **News Sentinel** | Macro | News sentiment, Black Swan detection, event calendar |
+| 4 | **Risk Manager** | Risk Officer | ATR SL/TP, Kelly sizing, circuit breakers |
+| 5 | **MT5 Executor** | Bridge | Order execution, slippage control, trailing stops |
+| 6 | **Memory Agent** | Auditor | Trade context storage, pattern risk warnings |
+| 7 | **Explorer** | Researcher | Strategy variants, paper trading optimization |
+| 8 | **Data Cleaner** | Data Guard | Gap filling, OHLC validation, spike removal |
 
-1. **Connect MT5** — enter login/password/server, or use Demo mode
-2. **Start Orchestrator** — click `[ START ]` in the header
-3. **Watch Agent Flow** — real-time activity in the AI Agents panel
-4. **Review Strategies** — filter/sort by category, run backtests
-5. **Deploy Strategy** — after backtesting, click DEPLOY to activate on MT5
-6. **Monitor Trades** — Trade Manager shows open positions with AI risk assessment
-7. **Run Manual Cycle** — click `[ CYCLE ]` for a single orchestration pass
+## Veto System
 
-## WebSocket Feed
+The Orchestrator blocks trades if:
+- Technical confidence < 52%
+- News verdict = "block" (high-impact event)
+- Memory risk score > 75% (similar past losses)
+- Risk check fails (exposure limits, spread, circuit breaker)
+- Session score < 30/100
 
-Real-time agent activity stream:
-```
-ws://localhost:8000/api/agents/stream
-```
+## Strategies
 
-## License
+- **OrderFlowScalping** — Volume imbalance + OBV + EMA alignment
+- **VWAPMeanReversionScalp** — Fades VWAP extremes with BB confirmation
+- **MicrostructureScalping** — ICT order blocks + FVGs + liquidity sweeps
 
-Quant-Joker Trader — For educational and personal trading use only.
-Trading carries risk. Past performance does not guarantee future results.
+## Session Focus
+
+| Session | Times (UTC) | Peak Hours |
+|---------|------------|------------|
+| Tokyo | 00:00-06:00 | 00:00-02:30 |
+| London | 08:00-16:30 | 08:00-10:30 |
+| New York | 13:30-20:00 | 13:30-15:30 |
+| **LDN-NY Overlap** | **13:30-16:30** | **⭐ Best for scalping** |
+
+## Risk Management
+
+- Daily loss limit: 2% → auto-stop
+- Max drawdown: 5% → circuit breaker
+- ATR-based SL/TP (not fixed pips)
+- Minimum R:R = 2:1
+- Position sizing: Fixed Risk % or Kelly Criterion
+
+## AI Integration
+
+- **FuelIX** (primary): `gemini-2.5-pro` via `https://api.fuelix.ai/v1/chat/completions`
+- **OpenAI** (backup): GPT-4o
+- **Google Gemini** (backup): gemini-1.5-pro
+- **ChromaDB** (local): Persistent trade memory + pattern learning
+
+## MT5 Files
+
+Export directly to MT5:
+- `backend/mt5_files/Experts/TradingTerminal_EA.mq5` → MT5 Expert Advisor
+- `backend/mt5_files/Indicators/TT_Dashboard.mq5` → Dashboard indicator
+
+Copy to MetaTrader 5 → `MQL5/Experts/` and `MQL5/Indicators/`
+
+## Configuration Reference
+
+See `backend/config/settings.yaml` for all parameters.
+
+## ⚠ Disclaimer
+
+**This software is for educational purposes only. Trading involves substantial risk of loss. Always test thoroughly in paper mode before any live deployment. Past performance does not guarantee future results.**

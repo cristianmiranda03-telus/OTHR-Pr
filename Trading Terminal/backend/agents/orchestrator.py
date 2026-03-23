@@ -1,312 +1,421 @@
 """
-Orchestrator Agent - Master controller for all Quant-Joker AI agents.
-Runs the full agentic loop: news → strategy → backtest → performance → trade management.
-Coordinates agent execution, shares context, and drives system-wide optimization.
+Agent 1: Orchestrator (The CEO / Agent Manager)
+Global state manager, veto authority, and workflow coordinator.
+Uses LangGraph for stateful multi-agent orchestration.
 """
 import asyncio
 import json
 from datetime import datetime
-from typing import Any
+from typing import Dict, List, Optional, Any
+from loguru import logger
 
-from .base_agent import BaseAgent, broadcast, AgentMessage, AgentStatus
-from .news_agent import NewsAgent
-from .strategy_agent import StrategyAgent
-from .backtest_agent import BacktestAgent
-from .performance_agent import PerformanceAgent
-from .trade_manager_agent import TradeManagerAgent
-from config.settings import settings
-
-
-ORCHESTRATOR_PROMPT = """You are the master AI orchestrator for Quant-Joker Trader, an algorithmic trading system.
-Your job is to coordinate all sub-agents and make the highest-level decisions about:
-- Which strategies to deploy right now
-- How aggressively to trade
-- What the current market opportunity score is
-- Whether to scale up, maintain, or halt trading
-
-Always prioritize: maximum risk-adjusted returns in minimum time. Be decisive and systematic."""
+from .base_agent import BaseAgent, AgentStatus
+from .technical_analyst import TechnicalAnalystAgent
+from .news_sentinel import NewsSentinelAgent
+from .risk_manager import RiskManagerAgent
+from .mt5_executor import MT5ExecutorAgent
+from .memory_agent import MemoryAgent
+from .explorer_agent import ExplorerAgent
+from .data_cleaner import DataCleanerAgent
+from ..core.mt5_connection import MT5Connection
+from ..core.sessions import SessionManager
+from ..utils.event_bus import EventBus
 
 
-class Orchestrator(BaseAgent):
-    """Master orchestrator coordinating all trading agents."""
+class OrchestratorAgent(BaseAgent):
+    """
+    Supreme coordinator of all agents.
+    
+    Workflow per symbol per cycle:
+    1. Data Cleaner → clean OHLCV data
+    2. Technical Analyst → find opportunity
+    3. Memory Agent → check past similar patterns
+    4. News Sentinel → macro validation
+    5. Risk Manager → position sizing + SL/TP
+    6. MT5 Executor → execute trade
+    7. Memory Agent → store result (async post-close)
+    8. Explorer Agent → background optimization (async)
+    
+    Veto conditions:
+    - Technical signal < 0.55 confidence
+    - News verdict is "block"
+    - Memory risk_score > 0.7
+    - Risk check fails
+    - Not in active session (if session_filter=True)
+    """
 
-    def __init__(self):
-        super().__init__(
-            agent_id="orchestrator",
-            name="Quant-Joker Orchestrator",
-            description="Master AI controller that coordinates all agents for maximum profit optimization",
-        )
-        self.news_agent = NewsAgent()
-        self.strategy_agent = StrategyAgent()
-        self.backtest_agent = BacktestAgent()
-        self.performance_agent = PerformanceAgent()
-        self.trade_manager = TradeManagerAgent()
+    def __init__(
+        self,
+        config: dict,
+        mt5: MT5Connection,
+        technical: TechnicalAnalystAgent,
+        news: NewsSentinelAgent,
+        risk: RiskManagerAgent,
+        executor: MT5ExecutorAgent,
+        memory: MemoryAgent,
+        explorer: ExplorerAgent,
+        data_cleaner: DataCleanerAgent,
+        session_mgr: SessionManager,
+        event_bus: EventBus,
+    ):
+        super().__init__("Orchestrator", config)
+        self.mt5 = mt5
+        self.technical = technical
+        self.news = news
+        self.risk = risk
+        self.executor = executor
+        self.memory = memory
+        self.explorer = explorer
+        self.data_cleaner = data_cleaner
+        self.session_mgr = session_mgr
+        self.bus = event_bus
 
-        self._loop_task: asyncio.Task | None = None
+        self.trading_cfg = config.get("trading", {})
+        self.scalping_cfg = config.get("scalping", {})
         self._running = False
-        self.cycle_count = 0
-        self.last_cycle: str | None = None
-        self.system_state: dict = {
-            "market_regime": "unknown",
-            "opportunity_score": 0.0,
-            "trading_mode": "paused",
-            "active_strategies": [],
-            "risk_level": "medium",
-        }
-        self.cycle_results: list[dict] = []
-
-    def get_all_agents(self) -> list[dict]:
-        """Return status of all agents."""
-        return [
-            self.to_dict(),
-            self.news_agent.to_dict(),
-            self.strategy_agent.to_dict(),
-            self.backtest_agent.to_dict(),
-            self.performance_agent.to_dict(),
-            self.trade_manager.to_dict(),
-        ]
-
-    def get_system_state(self) -> dict:
-        return {
-            **self.system_state,
-            "cycle_count": self.cycle_count,
-            "last_cycle": self.last_cycle,
-            "is_running": self._running,
+        self._cycle_count = 0
+        self._open_trade_contexts: Dict[int, Dict] = {}
+        self._stats = {
+            "total_cycles": 0, "signals_found": 0, "trades_opened": 0,
+            "trades_vetoed": 0, "veto_reasons": {},
         }
 
-    async def _get_mt5_context(self) -> dict:
-        """Gather current market context from MT5."""
-        context = {
-            "symbol": "EURUSD",
-            "timeframe": "H1",
-            "session": self._current_session(),
-            "equity": 10000,
-            "volatility": "medium",
-            "trend": "unknown",
-        }
-        try:
-            import MetaTrader5 as mt5
-            account = mt5.account_info()
-            if account:
-                context["equity"] = account.equity
-                context["balance"] = account.balance
+    async def _execute(self, context: Dict) -> Dict:
+        """Single orchestration cycle for one symbol."""
+        symbol = context.get("symbol", "EURUSD")
+        self._cycle_count += 1
+        self._stats["total_cycles"] += 1
 
-            # Get last 50 candles to assess trend and volatility
-            rates = mt5.copy_rates_from_pos("EURUSD", mt5.TIMEFRAME_H1, 0, 50)
-            if rates is not None and len(rates) > 20:
-                import numpy as np
-                closes = [r[4] for r in rates]  # close prices
-                sma20 = sum(closes[-20:]) / 20
-                sma50 = sum(closes) / len(closes)
-                current = closes[-1]
-                returns = [closes[i]/closes[i-1]-1 for i in range(1, len(closes))]
-                vol = float(np.std(returns) * 100)
+        # ── 0. Account & market state ──────────────────────────────────
+        account = await self.mt5.get_account_info()
+        positions = await self.mt5.get_positions(symbol)
+        tick = await self.mt5.get_tick(symbol)
+        symbol_info = await self.mt5.get_symbol_info(symbol)
+        session_info = self.session_mgr.get_session_info()
+        session_score = self.session_mgr.scalping_score(symbol)
 
-                context["trend"] = "bullish" if current > sma20 > sma50 else ("bearish" if current < sma20 < sma50 else "ranging")
-                context["volatility"] = "high" if vol > 0.05 else ("low" if vol < 0.02 else "medium")
-        except Exception:
-            pass
-        return context
+        if not account:
+            return {"cycle": self._cycle_count, "action": "skip",
+                    "reason": "No account data"}
 
-    def _current_session(self) -> str:
-        hour = datetime.utcnow().hour
-        if 8 <= hour < 12:
-            return "London"
-        elif 12 <= hour < 17:
-            return "London/New York Overlap"
-        elif 17 <= hour < 22:
-            return "New York"
-        elif 22 <= hour or hour < 2:
-            return "Sydney"
-        else:
-            return "Tokyo"
+        # Check mode
+        mode = self.trading_cfg.get("mode", "paper")
+        self._emit(f"🔄 Cycle #{self._cycle_count} | {symbol} | {mode.upper()} | "
+                   f"Sessions: {session_info.get('active_sessions', [])} | "
+                   f"Score: {session_score:.0f}/100")
 
-    async def run_full_cycle(self) -> dict:
-        """Execute a complete orchestration cycle."""
-        self.status = AgentStatus.RUNNING
-        cycle_start = datetime.utcnow().isoformat()
-        await self.log("info", f"═══ ORCHESTRATOR CYCLE #{self.cycle_count + 1} STARTED ═══")
+        # ── 1. Fetch and clean data ─────────────────────────────────────
+        df_m1 = await self.mt5.get_ohlcv(symbol, "M1", 300)
+        df_m5 = await self.mt5.get_ohlcv(symbol, "M5", 200)
+        df_h1 = await self.mt5.get_ohlcv(symbol, "H1", 100)
 
-        # Phase 1: Gather market context
-        await self.log("thinking", "Phase 1/5: Gathering market context from MT5...")
-        context = await self._get_mt5_context()
-        await self.log("action", f"Market context: {context.get('symbol')}/{context.get('timeframe')} | Session: {context.get('session')} | Trend: {context.get('trend')} | Vol: {context.get('volatility')}")
+        if len(df_m1) < 50:
+            return {"cycle": self._cycle_count, "action": "skip",
+                    "reason": "Insufficient data"}
 
-        # Phase 2: News analysis
-        await self.log("thinking", "Phase 2/5: Running News Intelligence Agent...")
-        self.news_agent.status = AgentStatus.RUNNING
-        news_result = await self.news_agent.safe_run(context)
-        news_analysis = news_result.get("analysis", {}) if news_result else {}
-        context["news_sentiment"] = news_analysis.get("overall_sentiment", "neutral")
+        clean_result = await self.data_cleaner.run({
+            "df": df_m1, "symbol": symbol, "timeframe": "M1"})
+        df_m1 = clean_result.get("df", df_m1)
+        data_quality = clean_result.get("quality_score", 1.0)
 
-        # Phase 3: Strategy research
-        await self.log("thinking", "Phase 3/5: Running Strategy Research Agent...")
-        self.strategy_agent.status = AgentStatus.RUNNING
-        strategy_result = await self.strategy_agent.safe_run(context)
-        recommended = strategy_result.get("recommended_strategies", []) if strategy_result else []
-        context["recommended_strategies"] = recommended
+        if data_quality < 0.6:
+            self._emit(f"⚠ Low data quality ({data_quality:.0%}) - skipping", "warning")
+            return {"cycle": self._cycle_count, "action": "skip",
+                    "reason": f"Data quality {data_quality:.0%}"}
 
-        # Phase 4: Backtesting recommended strategies
-        await self.log("thinking", "Phase 4/5: Running Backtesting Engine...")
-        strategies_to_test = [r["strategy_id"] for r in recommended[:3] if r.get("strategy_id")]
-        if not strategies_to_test:
-            strategies_to_test = ["rsi", "sma_cross"]
-
-        backtest_context = {
-            **context,
-            "strategies": strategies_to_test,
-            "cash": context.get("balance", 10000.0),
-        }
-        self.backtest_agent.status = AgentStatus.RUNNING
-        backtest_result = await self.backtest_agent.safe_run(backtest_context)
-        rankings = backtest_result.get("rankings", []) if backtest_result else []
-        context["backtest_rankings"] = rankings
-
-        # Phase 5: Performance evaluation
-        await self.log("thinking", "Phase 5/5: Running Performance Optimizer...")
-        active_strategies = [r["strategy_id"] for r in rankings[:2] if r.get("composite_score", 0) > 10]
-        context["active_strategies"] = active_strategies
-        self.performance_agent.status = AgentStatus.RUNNING
-        performance_result = await self.performance_agent.safe_run(context)
-        perf_recommendations = (performance_result or {}).get("recommendations", {})
-
-        # Phase 6: Trade management
-        await self.log("thinking", "Phase 6: Trade Manager checking positions...")
-        self.trade_manager.status = AgentStatus.RUNNING
-        trade_result = await self.trade_manager.safe_run({
-            **context,
-            "equity": (performance_result or {}).get("account", {}).get("equity", 10000) if performance_result else 10000,
+        # ── 2. Technical Analysis ───────────────────────────────────────
+        tech_result = await self.technical.run({
+            "symbol": symbol, "df_primary": df_m1,
+            "df_m5": df_m5, "df_h1": df_h1,
         })
 
-        # Orchestrator AI decision
-        await self.log("thinking", "Synthesizing all agent results into final trading decision...")
-        await self._make_final_decision(context, news_analysis, rankings, perf_recommendations)
+        signal = tech_result.get("signal", "hold")
+        confidence = tech_result.get("confidence", 0.0)
 
-        self.cycle_count += 1
-        self.last_cycle = datetime.utcnow().isoformat()
-        self.status = AgentStatus.DONE
+        await self.bus.publish("technical_update", {
+            "symbol": symbol, "signal": signal, "confidence": confidence,
+            "indicators": tech_result.get("indicators", {}),
+            "regime": tech_result.get("regime", "unknown"),
+        })
 
-        cycle_summary = {
-            "cycle": self.cycle_count,
-            "started_at": cycle_start,
-            "completed_at": self.last_cycle,
-            "symbol": context.get("symbol"),
-            "session": context.get("session"),
-            "trend": context.get("trend"),
-            "news_sentiment": context.get("news_sentiment"),
-            "strategies_tested": len(rankings),
-            "active_strategies": active_strategies,
-            "system_state": self.system_state.copy(),
-            "trade_actions": len((trade_result or {}).get("actions_taken", [])),
+        if signal == "hold":
+            return {"cycle": self._cycle_count, "action": "hold",
+                    "signal": "hold", "reason": "No signal"}
+
+        self._stats["signals_found"] += 1
+
+        # ── 3. Memory Check (Auditor) ───────────────────────────────────
+        market_ctx = {
+            **tech_result.get("snapshot", {}),
+            "session": str(session_info.get("active_sessions", [])),
+            "session_score": session_score,
         }
-        self.cycle_results.append(cycle_summary)
-        if len(self.cycle_results) > 50:
-            self.cycle_results = self.cycle_results[-50:]
+        memory_result = await self.memory.run({
+            "action": "query", "market_context": market_ctx})
 
-        await self.log("result", f"═══ CYCLE #{self.cycle_count} COMPLETE ═══ Mode: {self.system_state['trading_mode'].upper()} | Score: {self.system_state['opportunity_score']:.2f} | Active: {active_strategies}", cycle_summary)
+        memory_risk = memory_result.get("risk_score", 0.5)
+        memory_warning = memory_result.get("warning")
 
-        return cycle_summary
+        if memory_warning:
+            await self.bus.publish("system_warning", {
+                "level": "warning", "message": memory_warning, "agent": "MemoryAgent"})
 
-    async def _make_final_decision(self, context: dict, news: dict, rankings: list, perf_recs: dict):
-        """Master AI decision on trading mode and opportunity score."""
-        prompt = f"""Synthesize all agent reports and make final trading decisions:
+        # Veto: Memory too risky
+        if memory_risk > 0.75:
+            reason = f"Memory veto: risk score {memory_risk:.0%} - too similar to past losses"
+            self._veto(reason)
+            return {"cycle": self._cycle_count, "action": "veto",
+                    "reason": reason, "signal": signal}
 
-MARKET CONTEXT: {json.dumps(context, indent=2)}
-NEWS ANALYSIS: sentiment={news.get('overall_sentiment')}, risk={news.get('risk_appetite')}, themes={news.get('key_themes')}
-TOP STRATEGIES: {json.dumps([{{'id': r.get('strategy_id'), 'score': r.get('composite_score'), 'return': r.get('stats',{{}}).get('total_return_pct')}} for r in rankings[:3]], indent=2)}
-PERFORMANCE RECS: grade={perf_recs.get('performance_grade')}, health={perf_recs.get('system_health')}, timing={perf_recs.get('market_timing')}
+        # ── 4. News Sentinel ────────────────────────────────────────────
+        news_result = await self.news.run({"symbol": symbol})
+        news_verdict = news_result.get("verdict", "clear")
 
-Respond ONLY with JSON:
-{{
-  "opportunity_score": 0.0-1.0,
-  "trading_mode": "aggressive|normal|conservative|paused",
-  "market_regime": "trending|ranging|volatile|transitional",
-  "strategies_to_activate": ["strategy_id"],
-  "risk_level": "low|medium|high",
-  "position_size_multiplier": 0.5-2.0,
-  "max_trades": 1-10,
-  "decision_summary": "one sentence decision summary"
-}}"""
+        await self.bus.publish("news_update", {
+            "symbol": symbol, "verdict": news_verdict,
+            "sentiment": news_result.get("sentiment"),
+            "events": news_result.get("upcoming_events", []),
+        })
 
-        response = await self.ai_call(ORCHESTRATOR_PROMPT, prompt)
-        try:
-            if "```json" in response:
-                response = response.split("```json")[1].split("```")[0]
-            elif "```" in response:
-                response = response.split("```")[1].split("```")[0]
-            decision = json.loads(response.strip())
-            self.system_state.update({
-                "market_regime": decision.get("market_regime", "unknown"),
-                "opportunity_score": decision.get("opportunity_score", 0.0),
-                "trading_mode": decision.get("trading_mode", "paused"),
-                "active_strategies": decision.get("strategies_to_activate", []),
-                "risk_level": decision.get("risk_level", "medium"),
+        # Veto: News blocks
+        if news_verdict == "block":
+            reason = f"News veto: {news_result.get('reason', 'High-impact event')}"
+            self._veto(reason)
+            return {"cycle": self._cycle_count, "action": "veto",
+                    "reason": reason, "signal": signal}
+
+        # Reduce confidence in "caution" mode
+        if news_verdict == "caution":
+            confidence *= 0.8
+            self._emit(f"⚠ News caution - confidence reduced to {confidence:.1%}", "warning")
+
+        # Veto: Low confidence after adjustments
+        min_conf = 0.52
+        if confidence < min_conf:
+            reason = f"Confidence veto: {confidence:.1%} < {min_conf:.0%} after news adjustment"
+            self._veto(reason)
+            return {"cycle": self._cycle_count, "action": "veto",
+                    "reason": reason, "signal": signal}
+
+        # ── 5. Risk Manager ─────────────────────────────────────────────
+        spread = tick.get("spread", 2.0) if tick else 2.0
+        risk_result = await self.risk.run({
+            "symbol": symbol, "signal": signal,
+            "account": account, "positions": positions,
+            "technical_data": tech_result,
+            "session_info": session_info,
+            "symbol_info": symbol_info or {},
+            "spread": spread, "session_score": session_score,
+        })
+
+        if not risk_result.get("approved"):
+            reason = f"Risk veto: {risk_result.get('reason', 'Risk check failed')}"
+            self._veto(reason)
+            return {"cycle": self._cycle_count, "action": "veto",
+                    "reason": reason, "signal": signal}
+
+        lot_size = risk_result.get("lot_size", 0.01)
+        sl = risk_result.get("sl", 0.0)
+        tp = risk_result.get("tp", 0.0)
+
+        # ── 6. Execute Trade ────────────────────────────────────────────
+        if mode == "paper":
+            self._emit(f"📄 PAPER TRADE: {signal.upper()} {lot_size} {symbol} | "
+                       f"SL={sl:.5f} | TP={tp:.5f} | Conf={confidence:.1%}")
+            exec_result = {
+                "success": True, "ticket": self._cycle_count * -1,
+                "price_executed": tech_result.get("entry_price", 0),
+                "simulated": True, "paper": True,
+            }
+        else:
+            exec_result = await self.executor.run({
+                "action": "open", "symbol": symbol, "signal": signal,
+                "lot_size": lot_size, "sl": sl, "tp": tp,
+                "entry_price": tech_result.get("entry_price", 0),
+                "strategy_name": context.get("strategy_name", "TT-Scalp"),
             })
-            await self.log("result", f"DECISION: {decision.get('decision_summary', '')}", decision)
 
-            # If aggressive/normal mode and high confidence, execute signals
-            if decision.get("trading_mode") in ("aggressive", "normal") and decision.get("opportunity_score", 0) >= 0.65:
-                await self._auto_execute_signals(decision, rankings)
+        if exec_result.get("success"):
+            ticket = exec_result.get("ticket", 0)
+            self._stats["trades_opened"] += 1
+            self._open_trade_contexts[ticket] = {
+                "symbol": symbol, "signal": signal,
+                "market_context": {**market_ctx, "confidence": confidence,
+                                    "news_sentiment": news_result.get("sentiment", "neutral"),
+                                    "timeframe": "M1"},
+                "lot_size": lot_size, "sl": sl, "tp": tp,
+                "entry_price": exec_result.get("price_executed", 0),
+                "open_time": datetime.now(),
+            }
+            await self.bus.publish("trade_opened", {
+                "ticket": ticket, "symbol": symbol, "type": signal,
+                "lot_size": lot_size, "sl": sl, "tp": tp,
+                "entry_price": exec_result.get("price_executed", 0),
+                "confidence": confidence, "mode": mode,
+            })
+            self._emit(f"🎯 TRADE OPENED: #{ticket} | {signal.upper()} {lot_size} {symbol} | "
+                       f"SL={sl:.5f} | TP={tp:.5f} | Conf={confidence:.1%} | Mode={mode.upper()}")
 
-        except Exception as e:
-            await self.log("error", f"Final decision parse error: {e}")
+        return {
+            "cycle": self._cycle_count, "action": "trade",
+            "signal": signal, "symbol": symbol,
+            "lot_size": lot_size, "sl": sl, "tp": tp,
+            "confidence": confidence, "ticket": exec_result.get("ticket"),
+            "technical": tech_result.get("snapshot"),
+            "risk": {k: v for k, v in risk_result.items()
+                     if k not in ("daily_stats",)},
+        }
 
-    async def _auto_execute_signals(self, decision: dict, rankings: list):
-        """Auto-execute trade signals when conditions are met."""
-        signals_to_execute = []
-        for strategy_id in decision.get("strategies_to_activate", []):
-            for r in rankings:
-                if r.get("strategy_id") == strategy_id and r.get("stats"):
-                    stats = r["stats"]
-                    if stats.get("sharpe_ratio", 0) >= settings.MIN_SHARPE and stats.get("win_rate", 0) >= 50:
-                        signal = {
-                            "symbol": "EURUSD",
-                            "direction": "buy",  # Would come from live signal in production
-                            "confidence": min(1.0, decision.get("opportunity_score", 0.5) + 0.1),
-                            "sl_pips": 25,
-                            "tp_pips": 50,
-                            "volume": 0.01 * decision.get("position_size_multiplier", 1.0),
-                            "comment": f"QJ-Auto-{strategy_id}",
-                            "risk_pct": settings.MAX_RISK_PCT * 0.5,
-                        }
-                        signals_to_execute.append(signal)
-
-        if signals_to_execute:
-            await self.log("action", f"Auto-executing {len(signals_to_execute)} signals...")
-            await self.trade_manager.execute_signal_batch(signals_to_execute)
-
-    async def start_loop(self, interval_seconds: int | None = None):
-        """Start the continuous orchestration loop."""
-        if self._running:
-            await self.log("info", "Orchestrator loop already running")
+    async def notify_trade_closed(self, ticket: int, profit: float,
+                                   pips: float, exit_reason: str):
+        """Called when a trade closes - triggers memory storage."""
+        if ticket not in self._open_trade_contexts:
             return
-        self._running = True
-        interval = interval_seconds or settings.AGENT_LOOP_INTERVAL
-        await self.log("info", f"Orchestrator loop started (interval: {interval}s)")
-        self._loop_task = asyncio.create_task(self._run_loop(interval))
 
-    async def _run_loop(self, interval: int):
-        """Internal loop that continuously runs cycles."""
+        ctx = self._open_trade_contexts.pop(ticket)
+        duration = (datetime.now() - ctx["open_time"]).total_seconds() / 60
+
+        # Update risk stats
+        self.risk.record_trade_result(profit, pips)
+        account = await self.mt5.get_account_info()
+        if account:
+            self.risk.update_equity_external(account.get("equity", 0), profit)
+
+        # Store in memory (async)
+        asyncio.create_task(self.memory.run({
+            "action": "store",
+            "trade": {
+                "ticket": ticket, "symbol": ctx["symbol"],
+                "type": ctx["signal"], "profit": profit, "pips": pips,
+                "exit_reason": exit_reason, "duration_mins": round(duration, 1),
+            },
+            "market_context": ctx.get("market_context", {}),
+        }))
+
+        await self.bus.publish("trade_closed", {
+            "ticket": ticket, "symbol": ctx["symbol"],
+            "profit": profit, "pips": pips, "reason": exit_reason,
+        })
+
+        outcome = "WIN" if profit > 0 else "LOSS"
+        self._emit(f"{'🟢' if profit > 0 else '🔴'} TRADE CLOSED #{ticket} | "
+                   f"{outcome} | P/L={profit:.2f} | Pips={pips:.1f} | "
+                   f"Duration={duration:.0f}m | Reason={exit_reason}")
+
+    async def run_main_loop(self, symbols: Optional[List[str]] = None,
+                             interval_seconds: int = 30):
+        """Main trading loop - runs continuously."""
+        symbols = symbols or self.trading_cfg.get("symbols", ["EURUSD"])
+        self._running = True
+        self._emit(f"🚀 TRADING TERMINAL STARTED | Symbols: {symbols} | "
+                   f"Mode: {self.trading_cfg.get('mode','paper').upper()} | "
+                   f"Interval: {interval_seconds}s")
+
+        # Background: Explorer optimization every 6 hours
+        asyncio.create_task(self._exploration_loop(symbols))
+        # Background: Trailing stop updates every 60s
+        asyncio.create_task(self._trailing_stop_loop())
+        # Background: Position monitor
+        asyncio.create_task(self._position_monitor_loop())
+
         while self._running:
             try:
-                await self.run_full_cycle()
+                for symbol in symbols:
+                    if not self._running:
+                        break
+                    await self.run({"symbol": symbol})
+                    await asyncio.sleep(1.0)
+                await asyncio.sleep(interval_seconds)
+            except asyncio.CancelledError:
+                break
             except Exception as e:
-                await self.log("error", f"Cycle error: {e}")
-            await asyncio.sleep(interval)
+                self._emit(f"Main loop error: {e}", "error")
+                await asyncio.sleep(5)
 
-    async def stop_loop(self):
-        """Stop the orchestration loop."""
+        self._emit("⛔ Trading loop stopped")
+
+    async def stop(self):
         self._running = False
-        if self._loop_task:
-            self._loop_task.cancel()
-            self._loop_task = None
-        self.status = AgentStatus.IDLE
-        await self.log("info", "Orchestrator loop stopped")
+        await self.executor.run({"action": "close_all"})
+        self._emit("🛑 All positions closed - system stopped")
 
-    async def run(self, context: dict | None = None) -> dict:
-        """Single cycle run (used by safe_run)."""
-        return await self.run_full_cycle()
+    async def _exploration_loop(self, symbols: List[str]):
+        """Background strategy exploration."""
+        interval = self.config.get("explorer", {}).get(
+            "optimization_interval_hours", 6) * 3600
+        while self._running:
+            await asyncio.sleep(interval)
+            for symbol in symbols[:2]:
+                try:
+                    df = await self.mt5.get_ohlcv(symbol, "M1", 1000)
+                    if len(df) > 100:
+                        await self.explorer.run({
+                            "action": "explore", "df": df,
+                            "symbol": symbol, "timeframe": "M1",
+                        })
+                except Exception as e:
+                    self._emit(f"Exploration error: {e}", "warning")
 
+    async def _trailing_stop_loop(self):
+        """Update trailing stops every 60 seconds."""
+        from ..core.indicators import Indicators
+        while self._running:
+            await asyncio.sleep(60)
+            try:
+                atrs = {}
+                for symbol in self.trading_cfg.get("symbols", []):
+                    df = await self.mt5.get_ohlcv(symbol, "M1", 50)
+                    if len(df) > 14:
+                        atr = Indicators.atr(df, 14).iloc[-1]
+                        atrs[symbol] = float(atr)
+                if atrs:
+                    await self.executor.run({
+                        "action": "update_trailing",
+                        "atrs": atrs,
+                    })
+            except Exception as e:
+                self._emit(f"Trailing stop error: {e}", "warning")
 
-# Singleton instance
-orchestrator = Orchestrator()
+    async def _position_monitor_loop(self):
+        """Monitor open positions and notify on close."""
+        known_tickets = set()
+        while self._running:
+            await asyncio.sleep(10)
+            try:
+                positions = await self.mt5.get_positions()
+                current_tickets = {p["ticket"] for p in positions}
+                # Detect closed positions
+                for ticket in list(self._open_trade_contexts.keys()):
+                    if ticket > 0 and ticket not in current_tickets:
+                        history = await self.mt5.get_history(days=1)
+                        for deal in history:
+                            if deal.get("position_id") == ticket:
+                                await self.notify_trade_closed(
+                                    ticket=ticket,
+                                    profit=deal.get("profit", 0),
+                                    pips=deal.get("profit", 0),
+                                    exit_reason=deal.get("comment", "auto"),
+                                )
+                                break
+            except Exception as e:
+                self._emit(f"Position monitor error: {e}", "warning")
+
+    def _veto(self, reason: str):
+        self._stats["trades_vetoed"] += 1
+        cat = reason.split(":")[0] if ":" in reason else reason[:30]
+        self._stats["veto_reasons"][cat] = \
+            self._stats["veto_reasons"].get(cat, 0) + 1
+        self._emit(f"🚫 VETO: {reason}", "warning")
+
+    def get_full_stats(self) -> Dict:
+        return {
+            **self._stats,
+            "cycle": self._cycle_count,
+            "running": self._running,
+            "open_trades": len(self._open_trade_contexts),
+            "risk_stats": self.risk.get_daily_stats(),
+            "execution_stats": self.executor.get_execution_stats(),
+            "memory_stats": self.memory.get_memory_stats(),
+            "data_quality": self.data_cleaner.get_quality_scores(),
+            "strategy_leaderboard": self.explorer.get_strategy_leaderboard()[:5],
+        }
