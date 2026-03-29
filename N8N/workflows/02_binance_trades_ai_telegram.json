@@ -1,0 +1,155 @@
+{
+  "name": "Binance BTC Trades + AI Summary → Telegram",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            { "field": "minutes", "minutesInterval": 5 }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-520, 280],
+      "id": "sched-ai",
+      "name": "Every 5 minutes"
+    },
+    {
+      "parameters": {
+        "url": "https://api.binance.com/api/v3/trades",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "symbol", "value": "BTCUSDT" },
+            { "name": "limit", "value": "30" }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-300, 280],
+      "id": "binance-trades-ai",
+      "name": "Binance BTC Trades"
+    },
+    {
+      "parameters": {
+        "url": "https://api.binance.com/api/v3/ticker/24hr",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [{ "name": "symbol", "value": "BTCUSDT" }]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-300, 460],
+      "id": "binance-ticker",
+      "name": "BTC 24h Ticker"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "multiplex",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [-80, 360],
+      "id": "merge-data",
+      "name": "Merge Trades + Ticker"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst tradesItem = items.find(i => Array.isArray(i.json) || (i.json && i.json.id !== undefined && i.json.price !== undefined));\nconst tickerItem = items.find(i => i.json && i.json.symbol === 'BTCUSDT');\nconst trades = Array.isArray(tradesItem?.json) ? tradesItem.json : (tradesItem?.json ? [tradesItem.json] : []);\nconst ticker = tickerItem?.json || {};\nconst buyCount = trades.filter(t => !t.isBuyerMaker).length;\nconst sellCount = trades.filter(t => t.isBuyerMaker).length;\nconst prices = trades.slice(0, 20).map(t => parseFloat(t.price));\nconst avgPrice = prices.length ? (prices.reduce((a,b)=>a+b,0)/prices.length).toFixed(2) : ticker.lastPrice || 'N/A';\nconst summary = {\n  symbol: 'BTCUSDT',\n  tradesCount: trades.length,\n  buyCount,\n  sellCount,\n  avgPrice,\n  lastPrice: ticker.lastPrice,\n  priceChangePercent: ticker.priceChangePercent,\n  volume: ticker.volume,\n  high24h: ticker.highPrice,\n  low24h: ticker.lowPrice\n};\nreturn [{ json: summary }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [140, 360],
+      "id": "prepare-context",
+      "name": "Prepare market context"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.fuelix.ai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Authorization", "value": "=Bearer {{ $env.FUELXI_API_KEY || 'YOUR_FUELXI_API_KEY' }}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gemini-2.5-pro\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a concise trading analyst. In 2-4 short sentences, summarize recent BTC activity and any short-term sentiment (bullish/bearish/neutral) based on buy vs sell count and price. No disclaimers.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Recent BTC/USDT data: \" + JSON.stringify($json)\n    }\n  ],\n  \"max_tokens\": 300\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [360, 360],
+      "id": "fuelxi-chat",
+      "name": "AI Summary (FuelXI)"
+    },
+    {
+      "parameters": {
+        "jsCode": "const ai = $input.first().json;\nconst choice = ai.choices && ai.choices[0];\nconst content = (choice && choice.message && choice.message.content) ? choice.message.content : 'No summary.';\nconst text = `🤖 *BTC AI Summary*\\n\\n${content}`;\nreturn [{ json: { text, parse_mode: 'Markdown' } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [560, 360],
+      "id": "format-ai-msg",
+      "name": "Format AI message"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.telegram.org/bot{{ $env.TELEGRAM_BOT_TOKEN || 'YOUR_BOT_TOKEN' }}/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ chat_id: $env.TELEGRAM_CHAT_ID || 'YOUR_CHAT_ID', text: $json.text, parse_mode: 'Markdown', disable_web_page_preview: true }) }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [760, 360],
+      "id": "telegram-ai",
+      "name": "Send to Telegram"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Every 5 minutes": {
+      "main": [
+        [
+          { "node": "Binance BTC Trades", "type": "main", "index": 0 },
+          { "node": "BTC 24h Ticker", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Binance BTC Trades": {
+      "main": [[{ "node": "Merge Trades + Ticker", "type": "main", "index": 0 }]]
+    },
+    "BTC 24h Ticker": {
+      "main": [[{ "node": "Merge Trades + Ticker", "type": "main", "index": 1 }]]
+    },
+    "Merge Trades + Ticker": {
+      "main": [[{ "node": "Prepare market context", "type": "main", "index": 0 }]]
+    },
+    "Prepare market context": {
+      "main": [[{ "node": "AI Summary (FuelXI)", "type": "main", "index": 0 }]]
+    },
+    "AI Summary (FuelXI)": {
+      "main": [[{ "node": "Format AI message", "type": "main", "index": 0 }]]
+    },
+    "Format AI message": {
+      "main": [[{ "node": "Send to Telegram", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "versionId": "02-binance-ai-telegram-v1",
+  "meta": { "templateCredsSetupCompleted": false },
+  "tags": ["trading", "binance", "telegram", "ai", "fuelxi", "btc"]
+}

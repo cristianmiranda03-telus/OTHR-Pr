@@ -1,0 +1,85 @@
+{
+  "name": "Economic Calendar → Telegram (Stocks/Trends)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            { "field": "hours", "hoursInterval": 6 }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-400, 300],
+      "id": "sched-cal",
+      "name": "Every 6 hours"
+    },
+    {
+      "parameters": {
+        "jsCode": "const from = new Date();\nconst to = new Date();\nto.setDate(to.getDate() + 2);\nconst fromStr = from.toISOString().split('T')[0];\nconst toStr = to.toISOString().split('T')[0];\nreturn [{ json: { from: fromStr, to: toStr } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-200, 300],
+      "id": "date-range",
+      "name": "Date range (today + 2 days)"
+    },
+    {
+      "parameters": {
+        "url": "=https://finnhub.io/api/v1/calendar/economic?from={{ $json.from }}&to={{ $json.to }}&token={{ $env.FINNHUB_API_KEY || 'YOUR_FINNHUB_API_KEY' }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [20, 300],
+      "id": "finnhub-calendar",
+      "name": "Finnhub Economic Calendar"
+    },
+    {
+      "parameters": {
+        "jsCode": "const item = $input.first().json;\nlet events = item.economicCalendar || item;\nif (!Array.isArray(events)) events = [];\nconst highImpact = events\n  .filter(e => (e.impact && e.impact.toLowerCase() === 'high') || (e.importance !== undefined && e.importance >= 2))\n  .slice(0, 15);\nconst lines = highImpact.map(e => {\n  const time = e.time ? new Date(e.time).toISOString().replace('T',' ').slice(0,16) : (e.date || '');\n  const country = e.country || '';\n  const event = e.event || e.title || e.name || 'Event';\n  return `• ${time} [${country}] ${event}`;\n});\nconst text = `📅 *Economic Calendar* (next 2 days, high impact)\\n\\n` + (lines.length ? lines.join('\\n') : 'No high-impact events in range.');\nreturn [{ json: { text, parse_mode: 'Markdown', count: highImpact.length } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [240, 300],
+      "id": "filter-format",
+      "name": "Filter high impact & format"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.telegram.org/bot{{ $env.TELEGRAM_BOT_TOKEN || 'YOUR_BOT_TOKEN' }}/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ chat_id: $env.TELEGRAM_CHAT_ID || 'YOUR_CHAT_ID', text: $json.text, parse_mode: 'Markdown', disable_web_page_preview: true }) }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [460, 300],
+      "id": "telegram-cal",
+      "name": "Send to Telegram"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Every 6 hours": {
+      "main": [[{ "node": "Date range (today + 2 days)", "type": "main", "index": 0 }]]
+    },
+    "Date range (today + 2 days)": {
+      "main": [[{ "node": "Finnhub Economic Calendar", "type": "main", "index": 0 }]]
+    },
+    "Finnhub Economic Calendar": {
+      "main": [[{ "node": "Filter high impact & format", "type": "main", "index": 0 }]]
+    },
+    "Filter high impact & format": {
+      "main": [[{ "node": "Send to Telegram", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "versionId": "03-economic-calendar-v1",
+  "meta": { "templateCredsSetupCompleted": false },
+  "tags": ["trading", "economic-calendar", "telegram", "stocks", "finnhub"]
+}

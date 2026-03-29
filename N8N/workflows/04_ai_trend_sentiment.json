@@ -1,0 +1,156 @@
+{
+  "name": "AI Trend & Sentiment (BTC + events context)",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            { "field": "hours", "hoursInterval": 1 }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-560, 320],
+      "id": "sched-trend",
+      "name": "Every hour"
+    },
+    {
+      "parameters": {
+        "url": "https://api.binance.com/api/v3/ticker/24hr",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [{ "name": "symbol", "value": "BTCUSDT" }]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-360, 240],
+      "id": "ticker-btc",
+      "name": "BTC 24h Ticker"
+    },
+    {
+      "parameters": {
+        "url": "https://api.binance.com/api/v3/klines",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            { "name": "symbol", "value": "BTCUSDT" },
+            { "name": "interval", "value": "1h" },
+            { "name": "limit", "value": "24" }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-360, 400],
+      "id": "klines-btc",
+      "name": "BTC 1h Klines (24h)"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "multiplex",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [-140, 320],
+      "id": "merge-market",
+      "name": "Merge market data"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst ticker = items.find(i => i.json && i.json.symbol === 'BTCUSDT')?.json || {};\nconst klines = items.find(i => Array.isArray(i.json) && i.json.length > 0);\nconst candles = Array.isArray(klines?.json) ? klines.json : [];\nconst ohlc = candles.map(k => ({ o: k[1], h: k[2], l: k[3], c: k[4], v: k[5] }));\nconst payload = {\n  ticker: {\n    symbol: ticker.symbol,\n    lastPrice: ticker.lastPrice,\n    priceChange: ticker.priceChange,\n    priceChangePercent: ticker.priceChangePercent,\n    volume: ticker.volume,\n    highPrice: ticker.highPrice,\n    lowPrice: ticker.lowPrice,\n    weightedAvgPrice: ticker.weightedAvgPrice\n  },\n  last24hCandles: ohlc.slice(-12),\n  note: 'Consider these for short-term trend and sentiment.'\n};\nreturn [{ json: payload }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [80, 320],
+      "id": "build-context",
+      "name": "Build AI context"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.fuelix.ai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Authorization", "value": "=Bearer {{ $env.FUELXI_API_KEY || 'YOUR_FUELXI_API_KEY' }}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gemini-2.5-pro\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a trading analyst. In 3-5 short sentences: (1) Summarize BTC 24h price action and volume. (2) Note short-term trend (up/down/sideways) from the candles. (3) Give a neutral sentiment assessment (bullish/bearish/neutral) and one key risk or catalyst to watch. Be concise; no disclaimers.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Market data: \" + JSON.stringify($json)\n    }\n  ],\n  \"max_tokens\": 400\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [300, 320],
+      "id": "fuelxi-trend",
+      "name": "AI Trend Analysis (FuelXI)"
+    },
+    {
+      "parameters": {
+        "jsCode": "const ai = $input.first().json;\nconst choice = ai.choices && ai.choices[0];\nconst content = (choice && choice.message && choice.message.content) ? choice.message.content : 'No analysis.';\nconst text = `📊 *BTC Trend & Sentiment*\\n\\n${content}`;\nreturn [{ json: { text, parse_mode: 'Markdown' } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [520, 320],
+      "id": "format-trend-msg",
+      "name": "Format message"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.telegram.org/bot{{ $env.TELEGRAM_BOT_TOKEN || 'YOUR_BOT_TOKEN' }}/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ chat_id: $env.TELEGRAM_CHAT_ID || 'YOUR_CHAT_ID', text: $json.text, parse_mode: 'Markdown', disable_web_page_preview: true }) }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [720, 320],
+      "id": "telegram-trend",
+      "name": "Send to Telegram"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Every hour": {
+      "main": [
+        [
+          { "node": "BTC 24h Ticker", "type": "main", "index": 0 },
+          { "node": "BTC 1h Klines (24h)", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "BTC 24h Ticker": {
+      "main": [[{ "node": "Merge market data", "type": "main", "index": 0 }]]
+    },
+    "BTC 1h Klines (24h)": {
+      "main": [[{ "node": "Merge market data", "type": "main", "index": 1 }]]
+    },
+    "Merge market data": {
+      "main": [[{ "node": "Build AI context", "type": "main", "index": 0 }]]
+    },
+    "Build AI context": {
+      "main": [[{ "node": "AI Trend Analysis (FuelXI)", "type": "main", "index": 0 }]]
+    },
+    "AI Trend Analysis (FuelXI)": {
+      "main": [[{ "node": "Format message", "type": "main", "index": 0 }]]
+    },
+    "Format message": {
+      "main": [[{ "node": "Send to Telegram", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "versionId": "04-ai-trend-v1",
+  "meta": { "templateCredsSetupCompleted": false },
+  "tags": ["trading", "ai", "fuelxi", "btc", "sentiment", "trend"]
+}

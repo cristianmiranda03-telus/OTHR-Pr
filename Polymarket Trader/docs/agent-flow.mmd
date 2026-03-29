@@ -1,0 +1,71 @@
+%% Polymarket Trader — Agent & Orchestrator Flow
+%% Open in https://mermaid.live or VS Code with Mermaid extension
+
+flowchart TB
+    subgraph Entry["Entry"]
+        RUN[run.py]
+        CONFIG[config.ini]
+    end
+
+    subgraph Backend["Backend"]
+        API[main.py]
+        WS[WebSocket /ws/updates]
+        API --> WS
+    end
+
+    subgraph Orchestrator["Orchestrator Agent - El Joker"]
+        ORCH[run]
+        CREATE[Create 6 agents]
+        SPAWN[Spawn asyncio Tasks]
+        SEM[Semaphore]
+        HEART[Heartbeat 60s]
+        ORCH --> CREATE --> SPAWN --> SEM
+        SEM --> HEART --> ORCH
+    end
+
+    subgraph Market["Market Agents"]
+        POL[Politics]
+        CRY[Crypto]
+        SPO[Sports]
+        SCI[Science]
+    end
+
+    subgraph Strategy["Strategy Agents"]
+        SCOUT[StrategyScout]
+        WHALE[WhaleWatcher]
+    end
+
+    subgraph External["External"]
+        PM[Polymarket API]
+        LLM[FuelXI/OpenAI]
+    end
+
+    subgraph Stores["Stores"]
+        SUG[(suggestions)]
+        INV[(investigations)]
+        STR[(strategies)]
+        REG[(agents)]
+    end
+
+    subgraph UI["Frontend"]
+        DASH[Dashboard]
+    end
+
+    RUN --> API
+    API --> Orchestrator
+    ORCH --> Market
+    ORCH --> Strategy
+    Market --> PM
+    Market --> LLM
+    Strategy --> PM
+    Strategy --> LLM
+    Market --> SUG
+    Market --> INV
+    Market --> REG
+    Strategy --> SUG
+    Strategy --> STR
+    Strategy --> REG
+    Orchestrator --> REG
+    Stores --> API
+    API --> DASH
+    WS --> DASH

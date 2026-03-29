@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pocketoption-connector"
+version = "0.3.0"
+description = "Pocket Option helper: sync API, optional browser login for email/password, async connector"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pocketoptionapi-async>=2.0.1",
+  "python-dotenv>=1.0.0",
+  "nest-asyncio>=1.5.0",
+]
+
+[project.optional-dependencies]
+notebook = ["jupyter>=1.0.0", "ipykernel>=6.0.0", "pandas>=2.0.0"]
+credentials = ["playwright>=1.40.0"]
+
+[tool.setuptools]
+packages = ["pocketoption_connector"]

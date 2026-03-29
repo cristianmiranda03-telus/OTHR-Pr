@@ -1,0 +1,145 @@
+{
+  "name": "Combined Trading Signals Digest → Telegram",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            { "field": "hours", "hoursInterval": 4 }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [-720, 400],
+      "id": "sched-combined",
+      "name": "Every 4 hours"
+    },
+    {
+      "parameters": {
+        "url": "https://api.binance.com/api/v3/ticker/24hr",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-520, 280],
+      "id": "tickers",
+      "name": "Binance 24h Tickers"
+    },
+    {
+      "parameters": {
+        "url": "=https://finnhub.io/api/v1/calendar/economic?from={{ $now.format('yyyy-MM-dd') }}&to={{ $now.plus(2, 'days').format('yyyy-MM-dd') }}&token={{ $env.FINNHUB_API_KEY || 'YOUR_FINNHUB_API_KEY' }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [-520, 400],
+      "id": "calendar",
+      "name": "Economic Calendar"
+    },
+    {
+      "parameters": {
+        "mode": "combine",
+        "combinationMode": "multiplex",
+        "mergeByFields": { "values": [] },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [-280, 400],
+      "id": "merge-all",
+      "name": "Merge data"
+    },
+    {
+      "parameters": {
+        "jsCode": "const items = $input.all();\nconst tickerItem = items.find(i => i.json && (i.json.symbol === 'BTCUSDT' || (Array.isArray(i.json) && i.json.some(x => x.symbol === 'BTCUSDT'))));\nconst calendarItem = items.find(i => i.json && (i.json.economicCalendar || (Array.isArray(i.json) && i.json.length && i.json[0].event)));\nlet tickers = [];\nif (Array.isArray(tickerItem?.json)) tickers = tickerItem.json.filter(t => ['BTCUSDT','ETHUSDT'].includes(t.symbol));\nelse if (tickerItem?.json?.symbol) tickers = [tickerItem.json];\nlet events = [];\nif (calendarItem?.json?.economicCalendar) events = calendarItem.json.economicCalendar;\nelse if (Array.isArray(calendarItem?.json)) events = calendarItem.json;\nconst highEvents = events.filter(e => (e.impact && e.impact.toLowerCase() === 'high') || (e.importance >= 2)).slice(0, 8);\nconst payload = {\n  tickers: tickers.map(t => ({ symbol: t.symbol, lastPrice: t.lastPrice, priceChangePercent: t.priceChangePercent, volume: t.volume })),\n  upcomingEvents: highEvents.map(e => ({ time: e.time, country: e.country, event: e.event || e.title })),\n  generatedAt: new Date().toISOString()\n};\nreturn [{ json: payload }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [-60, 400],
+      "id": "prepare-payload",
+      "name": "Prepare digest payload"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.fuelix.ai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            { "name": "Authorization", "value": "=Bearer {{ $env.FUELXI_API_KEY || 'YOUR_FUELXI_API_KEY' }}" },
+            { "name": "Content-Type", "value": "application/json" }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"gemini-2.5-pro\",\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"You are a trading digest writer. In one short paragraph (4-6 sentences): summarize 24h crypto prices and % changes, then list the next high-impact economic events that could move markets. End with one line of actionable sentiment (bullish/bearish/neutral). Be concise; no disclaimers.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Data: \" + JSON.stringify($json)\n    }\n  ],\n  \"max_tokens\": 450\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [160, 400],
+      "id": "ai-digest",
+      "name": "AI Digest (FuelXI)"
+    },
+    {
+      "parameters": {
+        "jsCode": "const ai = $input.first().json;\nconst choice = ai.choices && ai.choices[0];\nconst content = (choice && choice.message && choice.message.content) ? choice.message.content : 'No digest.';\nconst text = `📬 *Trading Signals Digest*\\n\\n${content}`;\nreturn [{ json: { text, parse_mode: 'Markdown' } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [380, 400],
+      "id": "format-digest",
+      "name": "Format digest"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://api.telegram.org/bot{{ $env.TELEGRAM_BOT_TOKEN || 'YOUR_BOT_TOKEN' }}/sendMessage",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({ chat_id: $env.TELEGRAM_CHAT_ID || 'YOUR_CHAT_ID', text: $json.text, parse_mode: 'Markdown', disable_web_page_preview: true }) }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [580, 400],
+      "id": "telegram-digest",
+      "name": "Send to Telegram"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Every 4 hours": {
+      "main": [
+        [
+          { "node": "Binance 24h Tickers", "type": "main", "index": 0 },
+          { "node": "Economic Calendar", "type": "main", "index": 0 }
+        ]
+      ]
+    },
+    "Binance 24h Tickers": {
+      "main": [[{ "node": "Merge data", "type": "main", "index": 0 }]]
+    },
+    "Economic Calendar": {
+      "main": [[{ "node": "Merge data", "type": "main", "index": 1 }]]
+    },
+    "Merge data": {
+      "main": [[{ "node": "Prepare digest payload", "type": "main", "index": 0 }]]
+    },
+    "Prepare digest payload": {
+      "main": [[{ "node": "AI Digest (FuelXI)", "type": "main", "index": 0 }]]
+    },
+    "AI Digest (FuelXI)": {
+      "main": [[{ "node": "Format digest", "type": "main", "index": 0 }]]
+    },
+    "Format digest": {
+      "main": [[{ "node": "Send to Telegram", "type": "main", "index": 0 }]]
+    }
+  },
+  "active": false,
+  "settings": { "executionOrder": "v1" },
+  "versionId": "05-combined-digest-v1",
+  "meta": { "templateCredsSetupCompleted": false },
+  "tags": ["trading", "ai", "telegram", "binance", "economic-calendar", "digest"]
+}

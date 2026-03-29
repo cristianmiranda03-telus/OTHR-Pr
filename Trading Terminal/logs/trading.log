@@ -2010,3 +2010,1699 @@
 2026-03-22 18:25:18.839 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
 2026-03-22 18:25:18.839 | INFO | backend.agents.base_agent | 🔄 Cycle #630 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
 2026-03-22 18:25:18.841 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:25:49.854 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:25:49.855 | INFO | backend.agents.base_agent | 🔄 Cycle #631 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:25:49.857 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:25:50.865 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:25:50.866 | INFO | backend.agents.base_agent | 🔄 Cycle #632 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:25:50.868 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:25:51.871 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:25:51.873 | INFO | backend.agents.base_agent | 🔄 Cycle #633 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:25:51.875 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:25:52.887 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:25:52.888 | INFO | backend.agents.base_agent | 🔄 Cycle #634 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:25:52.890 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:25:53.904 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:25:53.905 | INFO | backend.agents.base_agent | 🔄 Cycle #635 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:25:53.907 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:25:54.918 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:25:54.919 | INFO | backend.agents.base_agent | 🔄 Cycle #636 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:25:54.921 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:26:25.946 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:26:25.948 | INFO | backend.agents.base_agent | 🔄 Cycle #637 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:26:25.951 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:26:26.958 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:26:26.958 | INFO | backend.agents.base_agent | 🔄 Cycle #638 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:26:26.962 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:26:27.971 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:26:27.972 | INFO | backend.agents.base_agent | 🔄 Cycle #639 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:26:27.974 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:26:28.985 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:26:28.986 | INFO | backend.agents.base_agent | 🔄 Cycle #640 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:26:28.989 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:26:29.996 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:26:29.998 | INFO | backend.agents.base_agent | 🔄 Cycle #641 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:26:30.000 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:26:31.009 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:26:31.010 | INFO | backend.agents.base_agent | 🔄 Cycle #642 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:26:31.012 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:02.034 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:02.035 | INFO | backend.agents.base_agent | 🔄 Cycle #643 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:02.037 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:03.043 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:03.044 | INFO | backend.agents.base_agent | 🔄 Cycle #644 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:03.046 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:04.047 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:04.049 | INFO | backend.agents.base_agent | 🔄 Cycle #645 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:27:04.051 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:05.054 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:05.055 | INFO | backend.agents.base_agent | 🔄 Cycle #646 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:05.056 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:06.066 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:06.067 | INFO | backend.agents.base_agent | 🔄 Cycle #647 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:06.068 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:07.074 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:07.075 | INFO | backend.agents.base_agent | 🔄 Cycle #648 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:07.076 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:38.082 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:38.083 | INFO | backend.agents.base_agent | 🔄 Cycle #649 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:38.084 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:39.092 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:39.093 | INFO | backend.agents.base_agent | 🔄 Cycle #650 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:39.095 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:40.112 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:40.113 | INFO | backend.agents.base_agent | 🔄 Cycle #651 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:27:40.115 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:41.120 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:41.121 | INFO | backend.agents.base_agent | 🔄 Cycle #652 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:41.122 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:42.133 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:42.134 | INFO | backend.agents.base_agent | 🔄 Cycle #653 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:42.135 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:27:43.139 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:27:43.140 | INFO | backend.agents.base_agent | 🔄 Cycle #654 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:27:43.142 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:14.165 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:14.166 | INFO | backend.agents.base_agent | 🔄 Cycle #655 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:14.168 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:15.177 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:15.178 | INFO | backend.agents.base_agent | 🔄 Cycle #656 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:15.180 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:16.187 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:16.188 | INFO | backend.agents.base_agent | 🔄 Cycle #657 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:28:16.190 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:17.207 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:17.209 | INFO | backend.agents.base_agent | 🔄 Cycle #658 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:17.212 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:18.214 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:18.215 | INFO | backend.agents.base_agent | 🔄 Cycle #659 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:18.216 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:19.225 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:19.227 | INFO | backend.agents.base_agent | 🔄 Cycle #660 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:19.229 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:50.242 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:50.243 | INFO | backend.agents.base_agent | 🔄 Cycle #661 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:50.244 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:51.257 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:51.258 | INFO | backend.agents.base_agent | 🔄 Cycle #662 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:51.259 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:52.265 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:52.266 | INFO | backend.agents.base_agent | 🔄 Cycle #663 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:28:52.267 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:53.269 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:53.269 | INFO | backend.agents.base_agent | 🔄 Cycle #664 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:53.270 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:54.285 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:54.286 | INFO | backend.agents.base_agent | 🔄 Cycle #665 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:54.287 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:28:55.289 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:28:55.290 | INFO | backend.agents.base_agent | 🔄 Cycle #666 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:28:55.292 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:29:26.317 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:29:26.319 | INFO | backend.agents.base_agent | 🔄 Cycle #667 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:29:26.324 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:29:27.334 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:29:27.335 | INFO | backend.agents.base_agent | 🔄 Cycle #668 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:29:27.341 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:29:28.349 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:29:28.350 | INFO | backend.agents.base_agent | 🔄 Cycle #669 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:29:28.352 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:29:29.366 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:29:29.366 | INFO | backend.agents.base_agent | 🔄 Cycle #670 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:29:29.368 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:29:30.377 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:29:30.378 | INFO | backend.agents.base_agent | 🔄 Cycle #671 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:29:30.380 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:29:31.383 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:29:31.384 | INFO | backend.agents.base_agent | 🔄 Cycle #672 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:29:31.385 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:02.409 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:02.410 | INFO | backend.agents.base_agent | 🔄 Cycle #673 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:02.412 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:03.412 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:03.413 | INFO | backend.agents.base_agent | 🔄 Cycle #674 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:03.414 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:03.554 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 16 (next in 300s if MT5 not running)
+2026-03-22 18:30:03.558 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 18:30:04.415 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:04.415 | INFO | backend.agents.base_agent | 🔄 Cycle #675 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:30:04.417 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:05.420 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:05.422 | INFO | backend.agents.base_agent | 🔄 Cycle #676 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:05.424 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:06.432 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:06.433 | INFO | backend.agents.base_agent | 🔄 Cycle #677 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:06.434 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:07.444 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:07.445 | INFO | backend.agents.base_agent | 🔄 Cycle #678 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:07.446 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:38.448 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:38.449 | INFO | backend.agents.base_agent | 🔄 Cycle #679 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:38.450 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:39.454 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:39.455 | INFO | backend.agents.base_agent | 🔄 Cycle #680 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:39.457 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:40.468 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:40.470 | INFO | backend.agents.base_agent | 🔄 Cycle #681 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:30:40.472 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:41.481 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:41.482 | INFO | backend.agents.base_agent | 🔄 Cycle #682 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:41.483 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:42.489 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:42.490 | INFO | backend.agents.base_agent | 🔄 Cycle #683 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:42.491 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:30:43.501 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:30:43.502 | INFO | backend.agents.base_agent | 🔄 Cycle #684 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:30:43.504 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:14.524 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:14.525 | INFO | backend.agents.base_agent | 🔄 Cycle #685 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:14.526 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:15.543 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:15.544 | INFO | backend.agents.base_agent | 🔄 Cycle #686 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:15.545 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:16.553 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:16.554 | INFO | backend.agents.base_agent | 🔄 Cycle #687 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:31:16.555 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:17.568 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:17.569 | INFO | backend.agents.base_agent | 🔄 Cycle #688 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:17.571 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:18.588 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:18.589 | INFO | backend.agents.base_agent | 🔄 Cycle #689 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:18.590 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:19.592 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:19.593 | INFO | backend.agents.base_agent | 🔄 Cycle #690 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:19.595 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:50.607 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:50.609 | INFO | backend.agents.base_agent | 🔄 Cycle #691 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:50.610 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:51.623 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:51.624 | INFO | backend.agents.base_agent | 🔄 Cycle #692 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:51.625 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:52.640 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:52.641 | INFO | backend.agents.base_agent | 🔄 Cycle #693 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:31:52.642 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:53.653 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:53.655 | INFO | backend.agents.base_agent | 🔄 Cycle #694 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:53.656 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:54.670 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:54.671 | INFO | backend.agents.base_agent | 🔄 Cycle #695 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:54.672 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:31:55.678 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:31:55.679 | INFO | backend.agents.base_agent | 🔄 Cycle #696 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:31:55.680 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:32:26.697 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:32:26.698 | INFO | backend.agents.base_agent | 🔄 Cycle #697 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:32:26.701 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:32:27.717 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:32:27.718 | INFO | backend.agents.base_agent | 🔄 Cycle #698 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:32:27.719 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:32:28.734 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:32:28.735 | INFO | backend.agents.base_agent | 🔄 Cycle #699 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:32:28.736 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:32:29.740 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:32:29.741 | INFO | backend.agents.base_agent | 🔄 Cycle #700 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:32:29.742 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:32:30.754 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:32:30.755 | INFO | backend.agents.base_agent | 🔄 Cycle #701 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:32:30.756 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:32:31.770 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:32:31.771 | INFO | backend.agents.base_agent | 🔄 Cycle #702 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:32:31.773 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:02.787 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:02.788 | INFO | backend.agents.base_agent | 🔄 Cycle #703 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:02.789 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:03.790 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:03.791 | INFO | backend.agents.base_agent | 🔄 Cycle #704 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:03.792 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:04.806 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:04.807 | INFO | backend.agents.base_agent | 🔄 Cycle #705 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:33:04.808 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:05.817 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:05.818 | INFO | backend.agents.base_agent | 🔄 Cycle #706 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:05.819 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:06.825 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:06.825 | INFO | backend.agents.base_agent | 🔄 Cycle #707 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:06.826 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:07.828 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:07.829 | INFO | backend.agents.base_agent | 🔄 Cycle #708 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:07.830 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:38.842 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:38.843 | INFO | backend.agents.base_agent | 🔄 Cycle #709 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:38.844 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:39.860 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:39.861 | INFO | backend.agents.base_agent | 🔄 Cycle #710 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:39.862 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:40.877 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:40.878 | INFO | backend.agents.base_agent | 🔄 Cycle #711 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:33:40.879 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:41.891 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:41.891 | INFO | backend.agents.base_agent | 🔄 Cycle #712 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:41.892 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:42.893 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:42.894 | INFO | backend.agents.base_agent | 🔄 Cycle #713 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:42.897 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:33:43.898 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:33:43.899 | INFO | backend.agents.base_agent | 🔄 Cycle #714 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:33:43.900 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:14.922 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:14.922 | INFO | backend.agents.base_agent | 🔄 Cycle #715 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:14.923 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:15.926 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:15.927 | INFO | backend.agents.base_agent | 🔄 Cycle #716 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:15.927 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:16.930 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:16.931 | INFO | backend.agents.base_agent | 🔄 Cycle #717 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:34:16.933 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:17.938 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:17.939 | INFO | backend.agents.base_agent | 🔄 Cycle #718 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:17.940 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:18.951 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:18.951 | INFO | backend.agents.base_agent | 🔄 Cycle #719 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:18.952 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:19.954 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:19.955 | INFO | backend.agents.base_agent | 🔄 Cycle #720 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:19.956 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:50.977 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:50.979 | INFO | backend.agents.base_agent | 🔄 Cycle #721 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:50.981 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:51.984 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:51.985 | INFO | backend.agents.base_agent | 🔄 Cycle #722 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:51.986 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:52.992 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:52.993 | INFO | backend.agents.base_agent | 🔄 Cycle #723 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:34:52.995 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:54.004 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:54.005 | INFO | backend.agents.base_agent | 🔄 Cycle #724 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:54.006 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:55.020 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:55.021 | INFO | backend.agents.base_agent | 🔄 Cycle #725 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:55.021 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:34:56.027 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:34:56.028 | INFO | backend.agents.base_agent | 🔄 Cycle #726 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:34:56.030 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:35:03.609 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 17 (next in 300s if MT5 not running)
+2026-03-22 18:35:03.612 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 18:35:27.049 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:35:27.050 | INFO | backend.agents.base_agent | 🔄 Cycle #727 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:35:27.051 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:35:28.060 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:35:28.061 | INFO | backend.agents.base_agent | 🔄 Cycle #728 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:35:28.063 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:35:29.075 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:35:29.076 | INFO | backend.agents.base_agent | 🔄 Cycle #729 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:35:29.077 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:35:30.091 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:35:30.091 | INFO | backend.agents.base_agent | 🔄 Cycle #730 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:35:30.092 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:35:31.105 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:35:31.105 | INFO | backend.agents.base_agent | 🔄 Cycle #731 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:35:31.106 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:35:32.108 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:35:32.108 | INFO | backend.agents.base_agent | 🔄 Cycle #732 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:35:32.110 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:03.130 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:03.130 | INFO | backend.agents.base_agent | 🔄 Cycle #733 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:03.132 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:04.135 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:04.136 | INFO | backend.agents.base_agent | 🔄 Cycle #734 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:04.138 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:05.146 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:05.147 | INFO | backend.agents.base_agent | 🔄 Cycle #735 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:36:05.150 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:06.162 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:06.163 | INFO | backend.agents.base_agent | 🔄 Cycle #736 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:06.165 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:07.169 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:07.171 | INFO | backend.agents.base_agent | 🔄 Cycle #737 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:07.173 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:08.189 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:08.189 | INFO | backend.agents.base_agent | 🔄 Cycle #738 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:08.191 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:39.201 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:39.202 | INFO | backend.agents.base_agent | 🔄 Cycle #739 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:39.203 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:40.219 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:40.220 | INFO | backend.agents.base_agent | 🔄 Cycle #740 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:40.220 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:41.233 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:41.234 | INFO | backend.agents.base_agent | 🔄 Cycle #741 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:36:41.235 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:42.250 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:42.251 | INFO | backend.agents.base_agent | 🔄 Cycle #742 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:42.252 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:43.268 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:43.268 | INFO | backend.agents.base_agent | 🔄 Cycle #743 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:43.269 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:36:44.270 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:36:44.271 | INFO | backend.agents.base_agent | 🔄 Cycle #744 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:36:44.272 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:15.296 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:15.297 | INFO | backend.agents.base_agent | 🔄 Cycle #745 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:15.298 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:16.312 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:16.313 | INFO | backend.agents.base_agent | 🔄 Cycle #746 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:16.314 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:17.321 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:17.322 | INFO | backend.agents.base_agent | 🔄 Cycle #747 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:37:17.324 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:18.336 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:18.337 | INFO | backend.agents.base_agent | 🔄 Cycle #748 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:18.338 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:19.349 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:19.349 | INFO | backend.agents.base_agent | 🔄 Cycle #749 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:19.350 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:20.356 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:20.357 | INFO | backend.agents.base_agent | 🔄 Cycle #750 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:20.359 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:51.385 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:51.386 | INFO | backend.agents.base_agent | 🔄 Cycle #751 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:51.387 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:52.394 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:52.395 | INFO | backend.agents.base_agent | 🔄 Cycle #752 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:52.397 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:53.401 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:53.402 | INFO | backend.agents.base_agent | 🔄 Cycle #753 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:37:53.403 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:54.410 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:54.411 | INFO | backend.agents.base_agent | 🔄 Cycle #754 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:54.412 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:55.417 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:55.418 | INFO | backend.agents.base_agent | 🔄 Cycle #755 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:55.419 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:37:56.421 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:37:56.422 | INFO | backend.agents.base_agent | 🔄 Cycle #756 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:37:56.423 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:38:27.443 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:38:27.444 | INFO | backend.agents.base_agent | 🔄 Cycle #757 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:38:27.446 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:38:28.456 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:38:28.457 | INFO | backend.agents.base_agent | 🔄 Cycle #758 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:38:28.459 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:38:29.472 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:38:29.473 | INFO | backend.agents.base_agent | 🔄 Cycle #759 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:38:29.475 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:38:30.486 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:38:30.487 | INFO | backend.agents.base_agent | 🔄 Cycle #760 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:38:30.490 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:38:31.493 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:38:31.494 | INFO | backend.agents.base_agent | 🔄 Cycle #761 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:38:31.495 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:38:32.510 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:38:32.511 | INFO | backend.agents.base_agent | 🔄 Cycle #762 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:38:32.512 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:03.530 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:03.531 | INFO | backend.agents.base_agent | 🔄 Cycle #763 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:03.532 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:04.546 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:04.547 | INFO | backend.agents.base_agent | 🔄 Cycle #764 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:04.548 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:05.549 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:05.550 | INFO | backend.agents.base_agent | 🔄 Cycle #765 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:39:05.551 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:06.555 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:06.556 | INFO | backend.agents.base_agent | 🔄 Cycle #766 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:06.557 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:07.558 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:07.559 | INFO | backend.agents.base_agent | 🔄 Cycle #767 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:07.561 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:08.562 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:08.563 | INFO | backend.agents.base_agent | 🔄 Cycle #768 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:08.564 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:39.576 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:39.577 | INFO | backend.agents.base_agent | 🔄 Cycle #769 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:39.578 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:40.591 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:40.592 | INFO | backend.agents.base_agent | 🔄 Cycle #770 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:40.593 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:41.603 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:41.604 | INFO | backend.agents.base_agent | 🔄 Cycle #771 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:39:41.606 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:42.615 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:42.616 | INFO | backend.agents.base_agent | 🔄 Cycle #772 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:42.618 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:43.633 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:43.636 | INFO | backend.agents.base_agent | 🔄 Cycle #773 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:43.638 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:39:44.652 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:39:44.653 | INFO | backend.agents.base_agent | 🔄 Cycle #774 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:39:44.655 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:03.656 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 18 (next in 300s if MT5 not running)
+2026-03-22 18:40:03.659 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 18:40:15.666 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:15.667 | INFO | backend.agents.base_agent | 🔄 Cycle #775 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:15.669 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:16.681 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:16.682 | INFO | backend.agents.base_agent | 🔄 Cycle #776 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:16.684 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:17.687 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:17.688 | INFO | backend.agents.base_agent | 🔄 Cycle #777 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:40:17.689 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:18.704 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:18.704 | INFO | backend.agents.base_agent | 🔄 Cycle #778 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:18.706 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:19.708 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:19.709 | INFO | backend.agents.base_agent | 🔄 Cycle #779 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:19.711 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:20.727 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:20.728 | INFO | backend.agents.base_agent | 🔄 Cycle #780 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:20.729 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:51.745 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:51.745 | INFO | backend.agents.base_agent | 🔄 Cycle #781 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:51.746 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:52.763 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:52.764 | INFO | backend.agents.base_agent | 🔄 Cycle #782 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:52.764 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:53.777 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:53.778 | INFO | backend.agents.base_agent | 🔄 Cycle #783 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:40:53.779 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:54.792 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:54.793 | INFO | backend.agents.base_agent | 🔄 Cycle #784 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:54.793 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:55.801 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:55.801 | INFO | backend.agents.base_agent | 🔄 Cycle #785 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:55.802 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:40:56.809 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:40:56.810 | INFO | backend.agents.base_agent | 🔄 Cycle #786 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:40:56.811 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:41:27.826 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:41:27.827 | INFO | backend.agents.base_agent | 🔄 Cycle #787 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:41:27.828 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:41:28.843 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:41:28.843 | INFO | backend.agents.base_agent | 🔄 Cycle #788 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:41:28.844 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:41:29.847 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:41:29.847 | INFO | backend.agents.base_agent | 🔄 Cycle #789 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:41:29.849 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:41:30.855 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:41:30.856 | INFO | backend.agents.base_agent | 🔄 Cycle #790 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:41:30.857 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:41:31.873 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:41:31.874 | INFO | backend.agents.base_agent | 🔄 Cycle #791 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:41:31.875 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:41:32.890 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:41:32.891 | INFO | backend.agents.base_agent | 🔄 Cycle #792 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:41:32.893 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:03.904 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:03.905 | INFO | backend.agents.base_agent | 🔄 Cycle #793 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:03.906 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:04.916 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:04.918 | INFO | backend.agents.base_agent | 🔄 Cycle #794 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:04.919 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:05.926 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:05.926 | INFO | backend.agents.base_agent | 🔄 Cycle #795 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:42:05.928 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:06.937 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:06.937 | INFO | backend.agents.base_agent | 🔄 Cycle #796 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:06.938 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:07.945 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:07.946 | INFO | backend.agents.base_agent | 🔄 Cycle #797 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:07.948 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:08.962 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:08.962 | INFO | backend.agents.base_agent | 🔄 Cycle #798 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:08.964 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:39.984 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:39.985 | INFO | backend.agents.base_agent | 🔄 Cycle #799 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:39.987 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:40.993 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:40.995 | INFO | backend.agents.base_agent | 🔄 Cycle #800 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:40.997 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:42.011 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:42.012 | INFO | backend.agents.base_agent | 🔄 Cycle #801 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:42:42.015 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:43.023 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:43.024 | INFO | backend.agents.base_agent | 🔄 Cycle #802 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:43.025 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:44.027 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:44.028 | INFO | backend.agents.base_agent | 🔄 Cycle #803 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:44.030 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:42:45.045 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:42:45.047 | INFO | backend.agents.base_agent | 🔄 Cycle #804 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:42:45.048 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:16.060 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:16.062 | INFO | backend.agents.base_agent | 🔄 Cycle #805 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:16.063 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:17.075 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:17.076 | INFO | backend.agents.base_agent | 🔄 Cycle #806 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:17.078 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:18.084 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:18.085 | INFO | backend.agents.base_agent | 🔄 Cycle #807 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:43:18.086 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:19.099 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:19.100 | INFO | backend.agents.base_agent | 🔄 Cycle #808 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:19.102 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:20.107 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:20.108 | INFO | backend.agents.base_agent | 🔄 Cycle #809 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:20.110 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:21.113 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:21.114 | INFO | backend.agents.base_agent | 🔄 Cycle #810 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:21.115 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:52.135 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:52.136 | INFO | backend.agents.base_agent | 🔄 Cycle #811 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:52.136 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:53.145 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:53.146 | INFO | backend.agents.base_agent | 🔄 Cycle #812 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:53.148 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:54.163 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:54.164 | INFO | backend.agents.base_agent | 🔄 Cycle #813 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:43:54.165 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:55.171 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:55.172 | INFO | backend.agents.base_agent | 🔄 Cycle #814 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:55.173 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:56.183 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:56.184 | INFO | backend.agents.base_agent | 🔄 Cycle #815 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:56.185 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:43:57.193 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:43:57.194 | INFO | backend.agents.base_agent | 🔄 Cycle #816 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:43:57.195 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:44:28.227 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:44:28.227 | INFO | backend.agents.base_agent | 🔄 Cycle #817 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:44:28.228 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:44:29.236 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:44:29.237 | INFO | backend.agents.base_agent | 🔄 Cycle #818 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:44:29.239 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:44:30.244 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:44:30.245 | INFO | backend.agents.base_agent | 🔄 Cycle #819 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:44:30.246 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:44:31.262 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:44:31.263 | INFO | backend.agents.base_agent | 🔄 Cycle #820 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:44:31.264 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:44:32.268 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:44:32.269 | INFO | backend.agents.base_agent | 🔄 Cycle #821 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:44:32.270 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:44:33.279 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:44:33.280 | INFO | backend.agents.base_agent | 🔄 Cycle #822 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:44:33.281 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:03.714 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 19 (next in 300s if MT5 not running)
+2026-03-22 18:45:03.717 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 18:45:04.305 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:04.305 | INFO | backend.agents.base_agent | 🔄 Cycle #823 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:04.307 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:05.322 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:05.322 | INFO | backend.agents.base_agent | 🔄 Cycle #824 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:05.324 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:06.328 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:06.328 | INFO | backend.agents.base_agent | 🔄 Cycle #825 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:45:06.330 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:07.345 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:07.345 | INFO | backend.agents.base_agent | 🔄 Cycle #826 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:07.347 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:08.363 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:08.363 | INFO | backend.agents.base_agent | 🔄 Cycle #827 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:08.364 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:09.380 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:09.381 | INFO | backend.agents.base_agent | 🔄 Cycle #828 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:09.382 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:40.403 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:40.404 | INFO | backend.agents.base_agent | 🔄 Cycle #829 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:40.405 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:41.406 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:41.407 | INFO | backend.agents.base_agent | 🔄 Cycle #830 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:41.409 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:42.415 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:42.416 | INFO | backend.agents.base_agent | 🔄 Cycle #831 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:45:42.417 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:43.432 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:43.433 | INFO | backend.agents.base_agent | 🔄 Cycle #832 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:43.434 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:44.440 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:44.441 | INFO | backend.agents.base_agent | 🔄 Cycle #833 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:44.443 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:45:45.459 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:45:45.460 | INFO | backend.agents.base_agent | 🔄 Cycle #834 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:45:45.461 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:16.476 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:16.477 | INFO | backend.agents.base_agent | 🔄 Cycle #835 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:16.479 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:17.492 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:17.493 | INFO | backend.agents.base_agent | 🔄 Cycle #836 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:17.495 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:18.510 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:18.511 | INFO | backend.agents.base_agent | 🔄 Cycle #837 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:46:18.513 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:19.522 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:19.523 | INFO | backend.agents.base_agent | 🔄 Cycle #838 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:19.524 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:20.538 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:20.539 | INFO | backend.agents.base_agent | 🔄 Cycle #839 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:20.542 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:21.549 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:21.550 | INFO | backend.agents.base_agent | 🔄 Cycle #840 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:21.552 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:52.571 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:52.572 | INFO | backend.agents.base_agent | 🔄 Cycle #841 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:52.573 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:53.578 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:53.579 | INFO | backend.agents.base_agent | 🔄 Cycle #842 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:53.580 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:54.590 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:54.591 | INFO | backend.agents.base_agent | 🔄 Cycle #843 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:46:54.592 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:55.594 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:55.594 | INFO | backend.agents.base_agent | 🔄 Cycle #844 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:55.595 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:56.605 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:56.606 | INFO | backend.agents.base_agent | 🔄 Cycle #845 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:56.607 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:46:57.618 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:46:57.619 | INFO | backend.agents.base_agent | 🔄 Cycle #846 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:46:57.621 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:47:28.639 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:47:28.640 | INFO | backend.agents.base_agent | 🔄 Cycle #847 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:47:28.641 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:47:29.651 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:47:29.652 | INFO | backend.agents.base_agent | 🔄 Cycle #848 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:47:29.654 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:47:30.656 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:47:30.657 | INFO | backend.agents.base_agent | 🔄 Cycle #849 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:47:30.658 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:47:31.665 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:47:31.666 | INFO | backend.agents.base_agent | 🔄 Cycle #850 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:47:31.667 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:47:32.681 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:47:32.682 | INFO | backend.agents.base_agent | 🔄 Cycle #851 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:47:32.683 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:47:33.685 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:47:33.686 | INFO | backend.agents.base_agent | 🔄 Cycle #852 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:47:33.688 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:04.696 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:04.697 | INFO | backend.agents.base_agent | 🔄 Cycle #853 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:04.698 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:05.711 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:05.711 | INFO | backend.agents.base_agent | 🔄 Cycle #854 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:05.712 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:06.718 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:06.719 | INFO | backend.agents.base_agent | 🔄 Cycle #855 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:48:06.720 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:07.728 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:07.731 | INFO | backend.agents.base_agent | 🔄 Cycle #856 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:07.732 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:08.734 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:08.736 | INFO | backend.agents.base_agent | 🔄 Cycle #857 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:08.738 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:09.743 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:09.745 | INFO | backend.agents.base_agent | 🔄 Cycle #858 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:09.746 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:40.756 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:40.757 | INFO | backend.agents.base_agent | 🔄 Cycle #859 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:40.758 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:41.772 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:41.773 | INFO | backend.agents.base_agent | 🔄 Cycle #860 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:41.774 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:42.781 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:42.782 | INFO | backend.agents.base_agent | 🔄 Cycle #861 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:48:42.783 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:43.792 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:43.793 | INFO | backend.agents.base_agent | 🔄 Cycle #862 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:43.793 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:44.805 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:44.806 | INFO | backend.agents.base_agent | 🔄 Cycle #863 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:44.807 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:48:45.823 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:48:45.823 | INFO | backend.agents.base_agent | 🔄 Cycle #864 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:48:45.824 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:16.850 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:16.851 | INFO | backend.agents.base_agent | 🔄 Cycle #865 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:16.852 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:17.865 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:17.866 | INFO | backend.agents.base_agent | 🔄 Cycle #866 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:17.867 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:18.883 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:18.884 | INFO | backend.agents.base_agent | 🔄 Cycle #867 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:49:18.886 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:19.894 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:19.895 | INFO | backend.agents.base_agent | 🔄 Cycle #868 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:19.896 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:20.901 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:20.902 | INFO | backend.agents.base_agent | 🔄 Cycle #869 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:20.903 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:21.918 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:21.919 | INFO | backend.agents.base_agent | 🔄 Cycle #870 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:21.920 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:52.932 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:52.933 | INFO | backend.agents.base_agent | 🔄 Cycle #871 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:52.934 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:53.950 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:53.950 | INFO | backend.agents.base_agent | 🔄 Cycle #872 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:53.951 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:54.961 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:54.961 | INFO | backend.agents.base_agent | 🔄 Cycle #873 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:49:54.962 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:55.975 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:55.976 | INFO | backend.agents.base_agent | 🔄 Cycle #874 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:55.977 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:56.992 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:56.993 | INFO | backend.agents.base_agent | 🔄 Cycle #875 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:56.994 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:49:57.996 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:49:57.997 | INFO | backend.agents.base_agent | 🔄 Cycle #876 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:49:57.998 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:50:03.785 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 20 (next in 300s if MT5 not running)
+2026-03-22 18:50:03.787 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 18:50:29.023 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:50:29.023 | INFO | backend.agents.base_agent | 🔄 Cycle #877 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:50:29.024 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:50:30.038 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:50:30.039 | INFO | backend.agents.base_agent | 🔄 Cycle #878 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:50:30.040 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:50:31.054 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:50:31.055 | INFO | backend.agents.base_agent | 🔄 Cycle #879 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:50:31.057 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:50:32.069 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:50:32.069 | INFO | backend.agents.base_agent | 🔄 Cycle #880 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:50:32.071 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:50:33.085 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:50:33.086 | INFO | backend.agents.base_agent | 🔄 Cycle #881 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:50:33.087 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:50:34.089 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:50:34.090 | INFO | backend.agents.base_agent | 🔄 Cycle #882 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:50:34.091 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:05.100 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:05.101 | INFO | backend.agents.base_agent | 🔄 Cycle #883 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:05.102 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:06.109 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:06.110 | INFO | backend.agents.base_agent | 🔄 Cycle #884 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:06.111 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:07.117 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:07.118 | INFO | backend.agents.base_agent | 🔄 Cycle #885 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:51:07.119 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:08.131 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:08.132 | INFO | backend.agents.base_agent | 🔄 Cycle #886 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:08.133 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:09.140 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:09.140 | INFO | backend.agents.base_agent | 🔄 Cycle #887 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:09.141 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:10.148 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:10.149 | INFO | backend.agents.base_agent | 🔄 Cycle #888 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:10.150 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:41.180 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:41.180 | INFO | backend.agents.base_agent | 🔄 Cycle #889 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:41.181 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:42.191 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:42.191 | INFO | backend.agents.base_agent | 🔄 Cycle #890 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:42.192 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:43.194 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:43.195 | INFO | backend.agents.base_agent | 🔄 Cycle #891 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:51:43.197 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:44.209 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:44.210 | INFO | backend.agents.base_agent | 🔄 Cycle #892 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:44.211 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:45.218 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:45.219 | INFO | backend.agents.base_agent | 🔄 Cycle #893 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:45.220 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:51:46.222 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:51:46.223 | INFO | backend.agents.base_agent | 🔄 Cycle #894 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:51:46.224 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:17.241 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:17.241 | INFO | backend.agents.base_agent | 🔄 Cycle #895 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:17.243 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:18.250 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:18.251 | INFO | backend.agents.base_agent | 🔄 Cycle #896 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:18.253 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:19.268 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:19.268 | INFO | backend.agents.base_agent | 🔄 Cycle #897 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:52:19.269 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:20.286 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:20.287 | INFO | backend.agents.base_agent | 🔄 Cycle #898 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:20.288 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:21.300 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:21.301 | INFO | backend.agents.base_agent | 🔄 Cycle #899 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:21.302 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:22.319 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:22.319 | INFO | backend.agents.base_agent | 🔄 Cycle #900 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:22.320 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:53.344 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:53.345 | INFO | backend.agents.base_agent | 🔄 Cycle #901 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:53.347 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:54.360 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:54.361 | INFO | backend.agents.base_agent | 🔄 Cycle #902 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:54.362 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:55.378 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:55.379 | INFO | backend.agents.base_agent | 🔄 Cycle #903 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:52:55.381 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:56.397 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:56.397 | INFO | backend.agents.base_agent | 🔄 Cycle #904 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:56.399 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:57.413 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:57.414 | INFO | backend.agents.base_agent | 🔄 Cycle #905 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:57.415 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:52:58.425 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:52:58.426 | INFO | backend.agents.base_agent | 🔄 Cycle #906 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:52:58.427 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:53:29.459 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:53:29.460 | INFO | backend.agents.base_agent | 🔄 Cycle #907 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:53:29.462 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:53:30.473 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:53:30.474 | INFO | backend.agents.base_agent | 🔄 Cycle #908 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:53:30.476 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:53:31.480 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:53:31.481 | INFO | backend.agents.base_agent | 🔄 Cycle #909 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:53:31.482 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:53:32.485 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:53:32.486 | INFO | backend.agents.base_agent | 🔄 Cycle #910 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:53:32.487 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:53:33.503 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:53:33.504 | INFO | backend.agents.base_agent | 🔄 Cycle #911 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:53:33.506 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:53:34.515 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:53:34.516 | INFO | backend.agents.base_agent | 🔄 Cycle #912 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:53:34.517 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:05.534 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:05.534 | INFO | backend.agents.base_agent | 🔄 Cycle #913 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:05.535 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:06.542 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:06.543 | INFO | backend.agents.base_agent | 🔄 Cycle #914 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:06.544 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:07.555 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:07.556 | INFO | backend.agents.base_agent | 🔄 Cycle #915 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:54:07.557 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:08.569 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:08.570 | INFO | backend.agents.base_agent | 🔄 Cycle #916 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:08.572 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:09.586 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:09.587 | INFO | backend.agents.base_agent | 🔄 Cycle #917 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:09.588 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:10.598 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:10.599 | INFO | backend.agents.base_agent | 🔄 Cycle #918 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:10.600 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:41.619 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:41.620 | INFO | backend.agents.base_agent | 🔄 Cycle #919 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:41.621 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:42.632 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:42.633 | INFO | backend.agents.base_agent | 🔄 Cycle #920 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:42.634 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:43.637 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:43.638 | INFO | backend.agents.base_agent | 🔄 Cycle #921 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:54:43.640 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:44.646 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:44.647 | INFO | backend.agents.base_agent | 🔄 Cycle #922 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:44.648 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:45.651 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:45.651 | INFO | backend.agents.base_agent | 🔄 Cycle #923 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:45.653 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:54:46.659 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:54:46.660 | INFO | backend.agents.base_agent | 🔄 Cycle #924 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:54:46.661 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:03.829 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 21 (next in 300s if MT5 not running)
+2026-03-22 18:55:03.831 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 18:55:17.676 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:17.677 | INFO | backend.agents.base_agent | 🔄 Cycle #925 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:17.678 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:18.687 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:18.688 | INFO | backend.agents.base_agent | 🔄 Cycle #926 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:18.690 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:19.698 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:19.698 | INFO | backend.agents.base_agent | 🔄 Cycle #927 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:55:19.699 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:20.715 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:20.716 | INFO | backend.agents.base_agent | 🔄 Cycle #928 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:20.718 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:21.720 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:21.721 | INFO | backend.agents.base_agent | 🔄 Cycle #929 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:21.723 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:22.737 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:22.738 | INFO | backend.agents.base_agent | 🔄 Cycle #930 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:22.739 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:53.760 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:53.761 | INFO | backend.agents.base_agent | 🔄 Cycle #931 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:53.762 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:54.772 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:54.773 | INFO | backend.agents.base_agent | 🔄 Cycle #932 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:54.775 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:55.788 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:55.789 | INFO | backend.agents.base_agent | 🔄 Cycle #933 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:55:55.790 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:56.801 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:56.802 | INFO | backend.agents.base_agent | 🔄 Cycle #934 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:56.803 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:57.807 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:57.807 | INFO | backend.agents.base_agent | 🔄 Cycle #935 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:57.809 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:55:58.810 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:55:58.811 | INFO | backend.agents.base_agent | 🔄 Cycle #936 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:55:58.813 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:56:29.834 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:56:29.835 | INFO | backend.agents.base_agent | 🔄 Cycle #937 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:56:29.836 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:56:30.852 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:56:30.853 | INFO | backend.agents.base_agent | 🔄 Cycle #938 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:56:30.854 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:56:31.856 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:56:31.857 | INFO | backend.agents.base_agent | 🔄 Cycle #939 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:56:31.858 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:56:32.874 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:56:32.874 | INFO | backend.agents.base_agent | 🔄 Cycle #940 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:56:32.876 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:56:33.879 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:56:33.880 | INFO | backend.agents.base_agent | 🔄 Cycle #941 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:56:33.882 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:56:34.898 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:56:34.898 | INFO | backend.agents.base_agent | 🔄 Cycle #942 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:56:34.900 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:05.917 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:05.918 | INFO | backend.agents.base_agent | 🔄 Cycle #943 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:05.920 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:06.934 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:06.935 | INFO | backend.agents.base_agent | 🔄 Cycle #944 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:06.937 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:07.948 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:07.950 | INFO | backend.agents.base_agent | 🔄 Cycle #945 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:57:07.951 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:08.966 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:08.967 | INFO | backend.agents.base_agent | 🔄 Cycle #946 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:08.969 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:09.975 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:09.976 | INFO | backend.agents.base_agent | 🔄 Cycle #947 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:09.978 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:10.983 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:10.984 | INFO | backend.agents.base_agent | 🔄 Cycle #948 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:10.985 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:41.989 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:41.990 | INFO | backend.agents.base_agent | 🔄 Cycle #949 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:41.992 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:42.996 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:42.997 | INFO | backend.agents.base_agent | 🔄 Cycle #950 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:42.998 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:44.001 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:44.002 | INFO | backend.agents.base_agent | 🔄 Cycle #951 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:57:44.003 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:45.019 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:45.020 | INFO | backend.agents.base_agent | 🔄 Cycle #952 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:45.021 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:46.036 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:46.038 | INFO | backend.agents.base_agent | 🔄 Cycle #953 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:46.039 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:57:47.046 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:57:47.047 | INFO | backend.agents.base_agent | 🔄 Cycle #954 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:57:47.048 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:18.060 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:18.061 | INFO | backend.agents.base_agent | 🔄 Cycle #955 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:18.062 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:19.075 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:19.076 | INFO | backend.agents.base_agent | 🔄 Cycle #956 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:19.079 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:20.083 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:20.084 | INFO | backend.agents.base_agent | 🔄 Cycle #957 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:58:20.086 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:21.100 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:21.101 | INFO | backend.agents.base_agent | 🔄 Cycle #958 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:21.103 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:22.113 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:22.119 | INFO | backend.agents.base_agent | 🔄 Cycle #959 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:22.121 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:23.136 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:23.138 | INFO | backend.agents.base_agent | 🔄 Cycle #960 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:23.140 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:54.154 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:54.155 | INFO | backend.agents.base_agent | 🔄 Cycle #961 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:54.157 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:55.167 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:55.168 | INFO | backend.agents.base_agent | 🔄 Cycle #962 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:55.169 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:56.171 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:56.172 | INFO | backend.agents.base_agent | 🔄 Cycle #963 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:58:56.173 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:57.188 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:57.188 | INFO | backend.agents.base_agent | 🔄 Cycle #964 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:57.189 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:58.205 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:58.206 | INFO | backend.agents.base_agent | 🔄 Cycle #965 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:58.207 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:58:59.222 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:58:59.223 | INFO | backend.agents.base_agent | 🔄 Cycle #966 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:58:59.224 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:59:30.244 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:59:30.244 | INFO | backend.agents.base_agent | 🔄 Cycle #967 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:59:30.245 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:59:31.252 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:59:31.253 | INFO | backend.agents.base_agent | 🔄 Cycle #968 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:59:31.254 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:59:32.267 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:59:32.268 | INFO | backend.agents.base_agent | 🔄 Cycle #969 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 18:59:32.269 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:59:33.278 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:59:33.278 | INFO | backend.agents.base_agent | 🔄 Cycle #970 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:59:33.280 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:59:34.296 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:59:34.297 | INFO | backend.agents.base_agent | 🔄 Cycle #971 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:59:34.298 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 18:59:35.312 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 18:59:35.313 | INFO | backend.agents.base_agent | 🔄 Cycle #972 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 18:59:35.315 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:03.867 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 22 (next in 300s if MT5 not running)
+2026-03-22 19:00:03.870 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 19:00:06.341 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:06.342 | INFO | backend.agents.base_agent | 🔄 Cycle #973 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:06.343 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:07.347 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:07.347 | INFO | backend.agents.base_agent | 🔄 Cycle #974 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:07.349 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:08.362 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:08.363 | INFO | backend.agents.base_agent | 🔄 Cycle #975 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:00:08.365 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:09.368 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:09.368 | INFO | backend.agents.base_agent | 🔄 Cycle #976 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:09.369 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:10.372 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:10.373 | INFO | backend.agents.base_agent | 🔄 Cycle #977 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:10.374 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:11.383 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:11.385 | INFO | backend.agents.base_agent | 🔄 Cycle #978 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:11.386 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:42.406 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:42.406 | INFO | backend.agents.base_agent | 🔄 Cycle #979 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:42.408 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:43.424 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:43.425 | INFO | backend.agents.base_agent | 🔄 Cycle #980 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:43.426 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:44.439 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:44.440 | INFO | backend.agents.base_agent | 🔄 Cycle #981 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:00:44.441 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:45.457 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:45.458 | INFO | backend.agents.base_agent | 🔄 Cycle #982 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:45.459 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:46.472 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:46.473 | INFO | backend.agents.base_agent | 🔄 Cycle #983 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:46.475 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:00:47.476 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:00:47.477 | INFO | backend.agents.base_agent | 🔄 Cycle #984 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:00:47.478 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:18.492 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:18.493 | INFO | backend.agents.base_agent | 🔄 Cycle #985 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:18.494 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:19.509 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:19.510 | INFO | backend.agents.base_agent | 🔄 Cycle #986 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:19.511 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:20.525 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:20.525 | INFO | backend.agents.base_agent | 🔄 Cycle #987 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:01:20.527 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:21.538 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:21.540 | INFO | backend.agents.base_agent | 🔄 Cycle #988 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:21.541 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:22.552 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:22.553 | INFO | backend.agents.base_agent | 🔄 Cycle #989 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:22.555 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:23.567 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:23.568 | INFO | backend.agents.base_agent | 🔄 Cycle #990 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:23.569 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:54.582 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:54.583 | INFO | backend.agents.base_agent | 🔄 Cycle #991 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:54.584 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:55.586 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:55.587 | INFO | backend.agents.base_agent | 🔄 Cycle #992 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:55.588 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:56.603 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:56.604 | INFO | backend.agents.base_agent | 🔄 Cycle #993 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:01:56.605 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:57.621 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:57.621 | INFO | backend.agents.base_agent | 🔄 Cycle #994 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:57.623 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:58.639 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:58.639 | INFO | backend.agents.base_agent | 🔄 Cycle #995 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:58.641 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:01:59.654 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:01:59.654 | INFO | backend.agents.base_agent | 🔄 Cycle #996 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:01:59.655 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:02:30.671 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:02:30.672 | INFO | backend.agents.base_agent | 🔄 Cycle #997 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:02:30.674 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:02:31.678 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:02:31.679 | INFO | backend.agents.base_agent | 🔄 Cycle #998 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:02:31.680 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:02:32.696 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:02:32.697 | INFO | backend.agents.base_agent | 🔄 Cycle #999 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:02:32.698 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:02:33.715 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:02:33.716 | INFO | backend.agents.base_agent | 🔄 Cycle #1000 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:02:33.717 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:02:34.720 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:02:34.721 | INFO | backend.agents.base_agent | 🔄 Cycle #1001 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:02:34.723 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:02:35.729 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:02:35.730 | INFO | backend.agents.base_agent | 🔄 Cycle #1002 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:02:35.732 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:06.749 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:06.750 | INFO | backend.agents.base_agent | 🔄 Cycle #1003 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:06.752 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:07.764 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:07.765 | INFO | backend.agents.base_agent | 🔄 Cycle #1004 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:07.767 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:08.774 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:08.775 | INFO | backend.agents.base_agent | 🔄 Cycle #1005 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:03:08.776 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:09.788 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:09.789 | INFO | backend.agents.base_agent | 🔄 Cycle #1006 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:09.790 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:10.792 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:10.792 | INFO | backend.agents.base_agent | 🔄 Cycle #1007 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:10.793 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:11.801 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:11.801 | INFO | backend.agents.base_agent | 🔄 Cycle #1008 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:11.803 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:42.821 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:42.822 | INFO | backend.agents.base_agent | 🔄 Cycle #1009 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:42.823 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:43.832 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:43.833 | INFO | backend.agents.base_agent | 🔄 Cycle #1010 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:43.834 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:44.836 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:44.836 | INFO | backend.agents.base_agent | 🔄 Cycle #1011 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:03:44.837 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:45.851 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:45.852 | INFO | backend.agents.base_agent | 🔄 Cycle #1012 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:45.853 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:46.867 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:46.867 | INFO | backend.agents.base_agent | 🔄 Cycle #1013 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:46.868 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:03:47.882 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:03:47.883 | INFO | backend.agents.base_agent | 🔄 Cycle #1014 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:03:47.884 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:18.898 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:18.899 | INFO | backend.agents.base_agent | 🔄 Cycle #1015 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:04:18.900 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:19.913 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:19.913 | INFO | backend.agents.base_agent | 🔄 Cycle #1016 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:04:19.914 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:20.918 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:20.919 | INFO | backend.agents.base_agent | 🔄 Cycle #1017 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:04:20.920 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:21.923 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:21.924 | INFO | backend.agents.base_agent | 🔄 Cycle #1018 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:04:21.925 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:22.929 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:22.929 | INFO | backend.agents.base_agent | 🔄 Cycle #1019 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:04:22.931 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:23.946 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:23.947 | INFO | backend.agents.base_agent | 🔄 Cycle #1020 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:04:23.948 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:54.961 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:54.962 | INFO | backend.agents.base_agent | 🔄 Cycle #1021 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:04:54.963 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:55.974 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:55.975 | INFO | backend.agents.base_agent | 🔄 Cycle #1022 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:04:55.976 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:56.980 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:56.981 | INFO | backend.agents.base_agent | 🔄 Cycle #1023 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:04:56.982 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:57.992 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:57.993 | INFO | backend.agents.base_agent | 🔄 Cycle #1024 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:04:57.994 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:04:58.999 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:04:58.999 | INFO | backend.agents.base_agent | 🔄 Cycle #1025 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:04:59.000 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:05:00.009 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:05:00.010 | INFO | backend.agents.base_agent | 🔄 Cycle #1026 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:05:00.011 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:05:03.916 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 23 (next in 300s if MT5 not running)
+2026-03-22 19:05:03.919 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 19:05:31.030 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:05:31.030 | INFO | backend.agents.base_agent | 🔄 Cycle #1027 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:05:31.031 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:05:32.047 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:05:32.048 | INFO | backend.agents.base_agent | 🔄 Cycle #1028 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:05:32.049 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:05:33.051 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:05:33.052 | INFO | backend.agents.base_agent | 🔄 Cycle #1029 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:05:33.053 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:05:34.068 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:05:34.069 | INFO | backend.agents.base_agent | 🔄 Cycle #1030 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:05:34.070 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:05:35.084 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:05:35.085 | INFO | backend.agents.base_agent | 🔄 Cycle #1031 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:05:35.087 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:05:36.100 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:05:36.101 | INFO | backend.agents.base_agent | 🔄 Cycle #1032 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:05:36.102 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:07.119 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:07.120 | INFO | backend.agents.base_agent | 🔄 Cycle #1033 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:07.122 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:08.128 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:08.129 | INFO | backend.agents.base_agent | 🔄 Cycle #1034 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:08.131 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:09.143 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:09.143 | INFO | backend.agents.base_agent | 🔄 Cycle #1035 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:06:09.145 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:10.146 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:10.147 | INFO | backend.agents.base_agent | 🔄 Cycle #1036 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:10.150 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:11.157 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:11.158 | INFO | backend.agents.base_agent | 🔄 Cycle #1037 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:11.160 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:12.166 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:12.168 | INFO | backend.agents.base_agent | 🔄 Cycle #1038 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:12.170 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:43.179 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:43.179 | INFO | backend.agents.base_agent | 🔄 Cycle #1039 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:43.180 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:44.194 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:44.194 | INFO | backend.agents.base_agent | 🔄 Cycle #1040 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:44.195 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:45.211 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:45.212 | INFO | backend.agents.base_agent | 🔄 Cycle #1041 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:06:45.213 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:46.214 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:46.215 | INFO | backend.agents.base_agent | 🔄 Cycle #1042 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:46.216 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:47.232 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:47.233 | INFO | backend.agents.base_agent | 🔄 Cycle #1043 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:47.235 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:06:48.246 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:06:48.247 | INFO | backend.agents.base_agent | 🔄 Cycle #1044 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:06:48.249 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:19.270 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:19.271 | INFO | backend.agents.base_agent | 🔄 Cycle #1045 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:07:19.273 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:20.286 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:20.287 | INFO | backend.agents.base_agent | 🔄 Cycle #1046 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:07:20.288 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:21.304 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:21.305 | INFO | backend.agents.base_agent | 🔄 Cycle #1047 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:07:21.306 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:22.311 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:22.312 | INFO | backend.agents.base_agent | 🔄 Cycle #1048 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:07:22.313 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:23.319 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:23.320 | INFO | backend.agents.base_agent | 🔄 Cycle #1049 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:07:23.321 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:24.335 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:24.336 | INFO | backend.agents.base_agent | 🔄 Cycle #1050 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:07:24.337 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:55.361 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:55.362 | INFO | backend.agents.base_agent | 🔄 Cycle #1051 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:07:55.364 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:56.380 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:56.381 | INFO | backend.agents.base_agent | 🔄 Cycle #1052 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:07:56.382 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:57.397 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:57.398 | INFO | backend.agents.base_agent | 🔄 Cycle #1053 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:07:57.399 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:58.414 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:58.415 | INFO | backend.agents.base_agent | 🔄 Cycle #1054 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:07:58.416 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:07:59.428 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:07:59.429 | INFO | backend.agents.base_agent | 🔄 Cycle #1055 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:07:59.431 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:08:00.440 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:08:00.441 | INFO | backend.agents.base_agent | 🔄 Cycle #1056 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:08:00.442 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:08:31.461 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:08:31.461 | INFO | backend.agents.base_agent | 🔄 Cycle #1057 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:08:31.463 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:08:32.471 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:08:32.472 | INFO | backend.agents.base_agent | 🔄 Cycle #1058 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:08:32.474 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:08:33.476 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:08:33.476 | INFO | backend.agents.base_agent | 🔄 Cycle #1059 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:08:33.478 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:08:34.492 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:08:34.493 | INFO | backend.agents.base_agent | 🔄 Cycle #1060 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:08:34.494 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:08:35.497 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:08:35.498 | INFO | backend.agents.base_agent | 🔄 Cycle #1061 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:08:35.499 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:08:36.514 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:08:36.515 | INFO | backend.agents.base_agent | 🔄 Cycle #1062 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:08:36.516 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:07.536 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:07.537 | INFO | backend.agents.base_agent | 🔄 Cycle #1063 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:07.538 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:08.547 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:08.548 | INFO | backend.agents.base_agent | 🔄 Cycle #1064 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:08.549 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:09.563 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:09.564 | INFO | backend.agents.base_agent | 🔄 Cycle #1065 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:09:09.565 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:10.573 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:10.574 | INFO | backend.agents.base_agent | 🔄 Cycle #1066 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:10.575 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:11.579 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:11.580 | INFO | backend.agents.base_agent | 🔄 Cycle #1067 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:11.582 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:12.594 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:12.595 | INFO | backend.agents.base_agent | 🔄 Cycle #1068 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:12.597 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:43.615 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:43.616 | INFO | backend.agents.base_agent | 🔄 Cycle #1069 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:43.618 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:44.624 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:44.625 | INFO | backend.agents.base_agent | 🔄 Cycle #1070 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:44.627 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:45.642 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:45.643 | INFO | backend.agents.base_agent | 🔄 Cycle #1071 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:09:45.644 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:46.657 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:46.658 | INFO | backend.agents.base_agent | 🔄 Cycle #1072 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:46.659 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:47.673 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:47.674 | INFO | backend.agents.base_agent | 🔄 Cycle #1073 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:47.675 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:09:48.689 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:09:48.690 | INFO | backend.agents.base_agent | 🔄 Cycle #1074 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:09:48.691 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:03.975 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 24 (next in 300s if MT5 not running)
+2026-03-22 19:10:03.978 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 19:10:19.697 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:19.698 | INFO | backend.agents.base_agent | 🔄 Cycle #1075 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:10:19.700 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:20.710 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:20.711 | INFO | backend.agents.base_agent | 🔄 Cycle #1076 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:10:20.712 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:21.723 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:21.724 | INFO | backend.agents.base_agent | 🔄 Cycle #1077 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:10:21.726 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:22.727 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:22.728 | INFO | backend.agents.base_agent | 🔄 Cycle #1078 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:10:22.729 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:23.742 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:23.743 | INFO | backend.agents.base_agent | 🔄 Cycle #1079 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:10:23.744 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:24.766 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:24.767 | INFO | backend.agents.base_agent | 🔄 Cycle #1080 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:10:24.769 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:55.796 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:55.797 | INFO | backend.agents.base_agent | 🔄 Cycle #1081 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:10:55.798 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:56.802 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:56.802 | INFO | backend.agents.base_agent | 🔄 Cycle #1082 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:10:56.803 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:57.806 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:57.806 | INFO | backend.agents.base_agent | 🔄 Cycle #1083 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:10:57.808 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:58.811 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:58.812 | INFO | backend.agents.base_agent | 🔄 Cycle #1084 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:10:58.814 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:10:59.828 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:10:59.829 | INFO | backend.agents.base_agent | 🔄 Cycle #1085 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:10:59.830 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:11:00.838 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:11:00.838 | INFO | backend.agents.base_agent | 🔄 Cycle #1086 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:11:00.840 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:11:31.847 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:11:31.848 | INFO | backend.agents.base_agent | 🔄 Cycle #1087 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:11:31.850 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:11:32.856 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:11:32.857 | INFO | backend.agents.base_agent | 🔄 Cycle #1088 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:11:32.859 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:11:33.875 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:11:33.875 | INFO | backend.agents.base_agent | 🔄 Cycle #1089 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:11:33.876 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:11:34.882 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:11:34.883 | INFO | backend.agents.base_agent | 🔄 Cycle #1090 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:11:34.884 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:11:35.901 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:11:35.903 | INFO | backend.agents.base_agent | 🔄 Cycle #1091 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:11:35.911 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:11:36.920 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:11:36.921 | INFO | backend.agents.base_agent | 🔄 Cycle #1092 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:11:36.922 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:07.936 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:07.937 | INFO | backend.agents.base_agent | 🔄 Cycle #1093 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:07.938 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:08.955 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:08.955 | INFO | backend.agents.base_agent | 🔄 Cycle #1094 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:08.956 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:09.968 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:09.970 | INFO | backend.agents.base_agent | 🔄 Cycle #1095 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:12:09.971 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:10.976 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:10.977 | INFO | backend.agents.base_agent | 🔄 Cycle #1096 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:10.979 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:11.992 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:11.993 | INFO | backend.agents.base_agent | 🔄 Cycle #1097 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:11.994 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:13.009 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:13.010 | INFO | backend.agents.base_agent | 🔄 Cycle #1098 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:13.011 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:44.040 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:44.041 | INFO | backend.agents.base_agent | 🔄 Cycle #1099 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:44.042 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:45.054 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:45.055 | INFO | backend.agents.base_agent | 🔄 Cycle #1100 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:45.056 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:46.070 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:46.071 | INFO | backend.agents.base_agent | 🔄 Cycle #1101 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:12:46.072 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:47.088 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:47.089 | INFO | backend.agents.base_agent | 🔄 Cycle #1102 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:47.090 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:48.107 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:48.108 | INFO | backend.agents.base_agent | 🔄 Cycle #1103 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:48.110 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:12:49.119 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:12:49.120 | INFO | backend.agents.base_agent | 🔄 Cycle #1104 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:12:49.122 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:20.153 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:20.154 | INFO | backend.agents.base_agent | 🔄 Cycle #1105 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:13:20.155 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:21.167 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:21.167 | INFO | backend.agents.base_agent | 🔄 Cycle #1106 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:13:21.169 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:22.174 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:22.175 | INFO | backend.agents.base_agent | 🔄 Cycle #1107 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:13:22.176 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:23.179 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:23.179 | INFO | backend.agents.base_agent | 🔄 Cycle #1108 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:13:23.180 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:24.193 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:24.194 | INFO | backend.agents.base_agent | 🔄 Cycle #1109 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:13:24.195 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:25.208 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:25.209 | INFO | backend.agents.base_agent | 🔄 Cycle #1110 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:13:25.211 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:56.231 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:56.232 | INFO | backend.agents.base_agent | 🔄 Cycle #1111 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:13:56.233 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:57.240 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:57.241 | INFO | backend.agents.base_agent | 🔄 Cycle #1112 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:13:57.242 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:58.244 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:58.244 | INFO | backend.agents.base_agent | 🔄 Cycle #1113 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:13:58.245 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:13:59.258 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:13:59.259 | INFO | backend.agents.base_agent | 🔄 Cycle #1114 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:13:59.260 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:14:00.269 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:14:00.269 | INFO | backend.agents.base_agent | 🔄 Cycle #1115 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:14:00.270 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:14:01.283 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:14:01.284 | INFO | backend.agents.base_agent | 🔄 Cycle #1116 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:14:01.286 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:14:32.312 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:14:32.313 | INFO | backend.agents.base_agent | 🔄 Cycle #1117 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:14:32.314 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:14:33.316 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:14:33.317 | INFO | backend.agents.base_agent | 🔄 Cycle #1118 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:14:33.319 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:14:34.334 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:14:34.335 | INFO | backend.agents.base_agent | 🔄 Cycle #1119 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:14:34.336 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:14:35.338 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:14:35.339 | INFO | backend.agents.base_agent | 🔄 Cycle #1120 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:14:35.341 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:14:36.345 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:14:36.345 | INFO | backend.agents.base_agent | 🔄 Cycle #1121 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:14:36.346 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:14:37.349 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:14:37.350 | INFO | backend.agents.base_agent | 🔄 Cycle #1122 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:14:37.351 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:04.025 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 25 (next in 300s if MT5 not running)
+2026-03-22 19:15:04.027 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 19:15:08.368 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:08.368 | INFO | backend.agents.base_agent | 🔄 Cycle #1123 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:08.370 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:09.385 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:09.386 | INFO | backend.agents.base_agent | 🔄 Cycle #1124 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:09.387 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:10.395 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:10.396 | INFO | backend.agents.base_agent | 🔄 Cycle #1125 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:15:10.398 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:11.399 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:11.400 | INFO | backend.agents.base_agent | 🔄 Cycle #1126 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:11.401 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:12.412 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:12.413 | INFO | backend.agents.base_agent | 🔄 Cycle #1127 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:12.414 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:13.421 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:13.422 | INFO | backend.agents.base_agent | 🔄 Cycle #1128 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:13.423 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:44.446 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:44.447 | INFO | backend.agents.base_agent | 🔄 Cycle #1129 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:44.449 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:45.459 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:45.460 | INFO | backend.agents.base_agent | 🔄 Cycle #1130 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:45.461 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:46.471 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:46.473 | INFO | backend.agents.base_agent | 🔄 Cycle #1131 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:15:46.474 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:47.483 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:47.484 | INFO | backend.agents.base_agent | 🔄 Cycle #1132 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:47.485 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:48.495 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:48.496 | INFO | backend.agents.base_agent | 🔄 Cycle #1133 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:48.497 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:15:49.510 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:15:49.511 | INFO | backend.agents.base_agent | 🔄 Cycle #1134 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:15:49.513 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:20.527 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:20.528 | INFO | backend.agents.base_agent | 🔄 Cycle #1135 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:16:20.530 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:21.537 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:21.538 | INFO | backend.agents.base_agent | 🔄 Cycle #1136 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:16:21.540 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:22.546 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:22.547 | INFO | backend.agents.base_agent | 🔄 Cycle #1137 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:16:22.549 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:23.553 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:23.554 | INFO | backend.agents.base_agent | 🔄 Cycle #1138 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:16:23.555 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:24.571 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:24.572 | INFO | backend.agents.base_agent | 🔄 Cycle #1139 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:16:24.574 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:25.585 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:25.586 | INFO | backend.agents.base_agent | 🔄 Cycle #1140 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:16:25.587 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:56.603 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:56.604 | INFO | backend.agents.base_agent | 🔄 Cycle #1141 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:16:56.605 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:57.619 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:57.621 | INFO | backend.agents.base_agent | 🔄 Cycle #1142 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:16:57.623 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:58.634 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:58.635 | INFO | backend.agents.base_agent | 🔄 Cycle #1143 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:16:58.636 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:16:59.649 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:16:59.650 | INFO | backend.agents.base_agent | 🔄 Cycle #1144 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:16:59.651 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:17:00.665 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:17:00.665 | INFO | backend.agents.base_agent | 🔄 Cycle #1145 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:17:00.666 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:17:01.675 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:17:01.675 | INFO | backend.agents.base_agent | 🔄 Cycle #1146 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:17:01.676 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:17:32.703 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:17:32.704 | INFO | backend.agents.base_agent | 🔄 Cycle #1147 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:17:32.705 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:17:33.721 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:17:33.722 | INFO | backend.agents.base_agent | 🔄 Cycle #1148 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:17:33.724 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:17:34.733 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:17:34.734 | INFO | backend.agents.base_agent | 🔄 Cycle #1149 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:17:34.736 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:17:35.749 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:17:35.750 | INFO | backend.agents.base_agent | 🔄 Cycle #1150 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:17:35.752 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:17:36.765 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:17:36.765 | INFO | backend.agents.base_agent | 🔄 Cycle #1151 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:17:36.767 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:17:37.768 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:17:37.769 | INFO | backend.agents.base_agent | 🔄 Cycle #1152 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:17:37.770 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:08.776 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:08.777 | INFO | backend.agents.base_agent | 🔄 Cycle #1153 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:08.778 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:09.787 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:09.788 | INFO | backend.agents.base_agent | 🔄 Cycle #1154 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:09.790 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:10.800 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:10.801 | INFO | backend.agents.base_agent | 🔄 Cycle #1155 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:18:10.803 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:11.813 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:11.814 | INFO | backend.agents.base_agent | 🔄 Cycle #1156 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:11.816 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:12.821 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:12.822 | INFO | backend.agents.base_agent | 🔄 Cycle #1157 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:12.823 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:13.833 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:13.834 | INFO | backend.agents.base_agent | 🔄 Cycle #1158 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:13.836 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:44.850 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:44.850 | INFO | backend.agents.base_agent | 🔄 Cycle #1159 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:44.851 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:45.867 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:45.868 | INFO | backend.agents.base_agent | 🔄 Cycle #1160 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:45.869 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:46.883 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:46.884 | INFO | backend.agents.base_agent | 🔄 Cycle #1161 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:18:46.885 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:47.899 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:47.900 | INFO | backend.agents.base_agent | 🔄 Cycle #1162 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:47.901 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:48.912 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:48.913 | INFO | backend.agents.base_agent | 🔄 Cycle #1163 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:48.914 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:18:49.928 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:18:49.929 | INFO | backend.agents.base_agent | 🔄 Cycle #1164 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:18:49.930 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:19:20.960 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:19:20.960 | INFO | backend.agents.base_agent | 🔄 Cycle #1165 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:19:20.962 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:19:21.976 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:19:21.977 | INFO | backend.agents.base_agent | 🔄 Cycle #1166 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:19:21.979 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:19:22.991 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:19:22.991 | INFO | backend.agents.base_agent | 🔄 Cycle #1167 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:19:22.992 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:19:24.005 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:19:24.006 | INFO | backend.agents.base_agent | 🔄 Cycle #1168 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:19:24.008 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:19:25.022 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:19:25.023 | INFO | backend.agents.base_agent | 🔄 Cycle #1169 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:19:25.024 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:19:26.036 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:19:26.037 | INFO | backend.agents.base_agent | 🔄 Cycle #1170 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:19:26.038 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:19:57.061 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:19:57.062 | INFO | backend.agents.base_agent | 🔄 Cycle #1171 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:19:57.063 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:19:58.069 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:19:58.070 | INFO | backend.agents.base_agent | 🔄 Cycle #1172 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:19:58.071 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:19:59.081 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:19:59.082 | INFO | backend.agents.base_agent | 🔄 Cycle #1173 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:19:59.084 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:20:00.088 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:20:00.089 | INFO | backend.agents.base_agent | 🔄 Cycle #1174 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:20:00.090 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:20:01.103 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:20:01.104 | INFO | backend.agents.base_agent | 🔄 Cycle #1175 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:20:01.106 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:20:02.112 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:20:02.113 | INFO | backend.agents.base_agent | 🔄 Cycle #1176 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:20:02.115 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:20:04.087 | WARNING | backend.core.mt5_connection | MT5 reconnect attempt 26 (next in 300s if MT5 not running)
+2026-03-22 19:20:04.090 | ERROR | backend.core.mt5_connection | MT5 init failed: (-10003, 'IPC initialize failed, MetaTrader 5 x64 not found')
+2026-03-22 19:20:33.130 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:20:33.131 | INFO | backend.agents.base_agent | 🔄 Cycle #1177 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:20:33.133 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:20:34.144 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:20:34.145 | INFO | backend.agents.base_agent | 🔄 Cycle #1178 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:20:34.147 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:20:35.159 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:20:35.159 | INFO | backend.agents.base_agent | 🔄 Cycle #1179 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:20:35.161 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:20:36.175 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:20:36.176 | INFO | backend.agents.base_agent | 🔄 Cycle #1180 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:20:36.177 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:20:37.184 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:20:37.185 | INFO | backend.agents.base_agent | 🔄 Cycle #1181 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:20:37.186 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:20:38.200 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:20:38.200 | INFO | backend.agents.base_agent | 🔄 Cycle #1182 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:20:38.202 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:21:09.232 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:21:09.233 | INFO | backend.agents.base_agent | 🔄 Cycle #1183 | EURUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:21:09.234 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:21:10.250 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:21:10.251 | INFO | backend.agents.base_agent | 🔄 Cycle #1184 | GBPUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:21:10.252 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:21:11.267 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:21:11.268 | INFO | backend.agents.base_agent | 🔄 Cycle #1185 | USDJPY | PAPER | Sessions: ['tse'] | Score: 100/100
+2026-03-22 19:21:11.269 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:21:12.277 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:21:12.278 | INFO | backend.agents.base_agent | 🔄 Cycle #1186 | XAUUSD | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:21:12.278 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:21:13.290 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:21:13.290 | INFO | backend.agents.base_agent | 🔄 Cycle #1187 | NAS100 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:21:13.292 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
+2026-03-22 19:21:14.296 | INFO | backend.agents.base_agent | ▶ Orchestrator starting
+2026-03-22 19:21:14.297 | INFO | backend.agents.base_agent | 🔄 Cycle #1188 | US30 | PAPER | Sessions: ['tse'] | Score: 75/100
+2026-03-22 19:21:14.298 | INFO | backend.agents.base_agent | ✓ Orchestrator completed
